@@ -3,44 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aditya Personal Website</title>
-  <meta name="description" content="Aditya Personal Website. A clean, modern single-page portfolio for an AEO, SEO and GEO specialist." />
-  <meta name="theme-color" content="#f7f8fc" />
+  <title>Aditya Agarwal | AEO, SEO & GEO Specialist</title>
+  <meta name="description" content="Personal website of Aditya Agarwal, an AEO, SEO and GEO specialist focused on organic growth, AI search visibility and content-led acquisition." />
+  <meta name="theme-color" content="#0b1220" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f4f7fb;
+      --bg: #f3f6fb;
       --bg-soft: #ffffff;
-      --panel: rgba(255, 255, 255, 0.72);
-      --panel-strong: rgba(255, 255, 255, 0.92);
-      --text: #0e1525;
-      --muted: #5f6980;
-      --line: rgba(18, 26, 46, 0.08);
-      --shadow: 0 24px 80px rgba(15, 22, 39, 0.08);
-      --shadow-soft: 0 12px 32px rgba(15, 22, 39, 0.06);
-      --accent: #356dff;
-      --accent-2: #8a63ff;
-      --accent-3: #14c7c9;
-      --accent-soft: rgba(53, 109, 255, 0.1);
+      --panel: rgba(255,255,255,0.72);
+      --panel-strong: rgba(255,255,255,0.92);
+      --text: #0d1528;
+      --muted: #62708a;
+      --line: rgba(18,26,46,0.08);
+      --shadow: 0 30px 80px rgba(15,22,39,0.08);
+      --shadow-soft: 0 14px 36px rgba(15,22,39,0.06);
+      --accent: #346dff;
+      --accent-2: #8c63ff;
+      --accent-3: #18c7c8;
+      --accent-soft: rgba(52,109,255,0.10);
       --max: 1240px;
     }
 
     body.dark {
-      --bg: #07111f;
+      --bg: #07101c;
       --bg-soft: #0b1628;
-      --panel: rgba(12, 21, 39, 0.74);
-      --panel-strong: rgba(13, 23, 42, 0.92);
-      --text: #f2f7ff;
-      --muted: #97a8c4;
-      --line: rgba(255, 255, 255, 0.08);
-      --shadow: 0 30px 100px rgba(0, 0, 0, 0.34);
-      --shadow-soft: 0 16px 42px rgba(0, 0, 0, 0.24);
-      --accent: #7da0ff;
-      --accent-2: #b086ff;
-      --accent-3: #49d7da;
-      --accent-soft: rgba(125, 160, 255, 0.16);
+      --panel: rgba(12,20,38,0.72);
+      --panel-strong: rgba(12,20,38,0.92);
+      --text: #eff5ff;
+      --muted: #95a5c1;
+      --line: rgba(255,255,255,0.08);
+      --shadow: 0 34px 110px rgba(0,0,0,0.34);
+      --shadow-soft: 0 16px 44px rgba(0,0,0,0.24);
+      --accent: #7fa4ff;
+      --accent-2: #b28cff;
+      --accent-3: #4ad8da;
+      --accent-soft: rgba(127,164,255,0.16);
     }
 
     * { box-sizing: border-box; }
@@ -49,9 +49,9 @@
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
       background:
-        radial-gradient(circle at 0% 0%, rgba(53,109,255,0.09), transparent 24%),
-        radial-gradient(circle at 100% 8%, rgba(138,99,255,0.10), transparent 26%),
-        radial-gradient(circle at 82% 78%, rgba(20,199,201,0.08), transparent 20%),
+        radial-gradient(circle at 0% 0%, rgba(52,109,255,0.11), transparent 24%),
+        radial-gradient(circle at 100% 10%, rgba(140,99,255,0.12), transparent 26%),
+        radial-gradient(circle at 82% 80%, rgba(24,199,200,0.08), transparent 20%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
       color: var(--text);
       transition: background 0.35s ease, color 0.35s ease;
@@ -80,6 +80,7 @@
     }
 
     a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
 
     .wrap {
       width: min(var(--max), calc(100% - 28px));
@@ -91,7 +92,7 @@
     .nav {
       position: sticky;
       top: 16px;
-      z-index: 50;
+      z-index: 60;
       padding-top: 16px;
     }
 
@@ -125,7 +126,7 @@
       letter-spacing: -0.03em;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: white;
-      box-shadow: 0 10px 25px rgba(53,109,255,0.24);
+      box-shadow: 0 10px 25px rgba(52,109,255,0.24);
     }
 
     .brand-copy strong {
@@ -143,7 +144,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       flex-wrap: wrap;
     }
 
@@ -191,7 +192,7 @@
     }
 
     .hero {
-      padding: 34px 0 28px;
+      padding: 34px 0 24px;
     }
 
     .hero-shell {
@@ -210,24 +211,24 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 18% 24%, rgba(53,109,255,0.10), transparent 24%),
-        radial-gradient(circle at 84% 18%, rgba(138,99,255,0.12), transparent 20%),
-        radial-gradient(circle at 72% 78%, rgba(20,199,201,0.08), transparent 18%);
+        radial-gradient(circle at 18% 22%, rgba(52,109,255,0.10), transparent 24%),
+        radial-gradient(circle at 86% 18%, rgba(140,99,255,0.12), transparent 21%),
+        radial-gradient(circle at 76% 78%, rgba(24,199,200,0.08), transparent 18%);
       pointer-events: none;
     }
 
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: 1.02fr 0.98fr;
+      grid-template-columns: 1.08fr 0.92fr;
       gap: 28px;
       align-items: center;
-      min-height: 86vh;
+      min-height: 88vh;
     }
 
     .hero-copy {
-      padding: 18px 8px 18px 4px;
-      max-width: 640px;
+      max-width: 660px;
+      padding: 12px 4px 12px 2px;
     }
 
     .eyebrow {
@@ -237,7 +238,7 @@
       width: fit-content;
       padding: 10px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.58);
+      background: rgba(255,255,255,0.60);
       border: 1px solid var(--line);
       color: var(--accent);
       font-size: 0.82rem;
@@ -246,9 +247,7 @@
       box-shadow: var(--shadow-soft);
     }
 
-    body.dark .eyebrow {
-      background: rgba(255,255,255,0.04);
-    }
+    body.dark .eyebrow { background: rgba(255,255,255,0.04); }
 
     .eyebrow::before {
       content: "";
@@ -261,18 +260,18 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3.2rem, 7vw, 6.6rem);
-      line-height: 0.9;
+      font-size: clamp(3.2rem, 7vw, 6.4rem);
+      line-height: 0.92;
       letter-spacing: -0.07em;
       max-width: 760px;
     }
 
     .hero-copy p {
-      max-width: 620px;
       color: var(--muted);
-      line-height: 1.82;
+      line-height: 1.84;
       font-size: 1.05rem;
       margin: 22px 0 0;
+      max-width: 620px;
     }
 
     .hero-actions {
@@ -282,32 +281,31 @@
       margin-top: 30px;
     }
 
-    .hero-metrics {
+    .hero-highlights {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
       margin-top: 34px;
     }
 
-    .metric {
+    .highlight {
       padding: 18px;
       border-radius: 22px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.56);
+      background: rgba(255,255,255,0.58);
       box-shadow: var(--shadow-soft);
     }
 
-    body.dark .metric {
-      background: rgba(255,255,255,0.03);
-    }
+    body.dark .highlight { background: rgba(255,255,255,0.03); }
 
-    .metric strong {
+    .highlight strong {
       display: block;
-      font-size: 0.98rem;
+      font-size: 1.2rem;
+      line-height: 1;
       margin-bottom: 8px;
     }
 
-    .metric span {
+    .highlight span {
       display: block;
       color: var(--muted);
       font-size: 0.9rem;
@@ -316,96 +314,112 @@
 
     .hero-visual {
       position: relative;
-      min-height: 700px;
+      min-height: 720px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 8px;
     }
 
-    .visual-orbit {
+    .visual-stage {
       position: relative;
       width: 100%;
-      max-width: 620px;
-      aspect-ratio: 1 / 1.02;
+      max-width: 610px;
+      aspect-ratio: 1 / 1.08;
     }
 
-    .glow-disc,
-    .glow-disc-2 {
+    .hero-panel,
+    .photo-card,
+    .mini-float,
+    .stat-float {
       position: absolute;
-      border-radius: 50%;
-      filter: blur(18px);
-      opacity: 0.7;
-    }
-
-    .glow-disc {
-      width: 250px;
-      height: 250px;
-      right: 8%;
-      top: 8%;
-      background: radial-gradient(circle, rgba(138,99,255,0.24), transparent 70%);
-    }
-
-    .glow-disc-2 {
-      width: 230px;
-      height: 230px;
-      left: 2%;
-      bottom: 8%;
-      background: radial-gradient(circle, rgba(20,199,201,0.20), transparent 70%);
-    }
-
-    .hero-card {
-      position: absolute;
-      border-radius: 30px;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+      background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.76));
       backdrop-filter: blur(20px);
       box-shadow: var(--shadow);
+    }
+
+    body.dark .hero-panel,
+    body.dark .photo-card,
+    body.dark .mini-float,
+    body.dark .stat-float {
+      background: linear-gradient(180deg, rgba(13,22,40,0.94), rgba(10,18,34,0.82));
+    }
+
+    .hero-panel {
+      inset: 12% 6% 6% 10%;
+      border-radius: 34px;
       overflow: hidden;
-      transition: transform 0.35s ease, opacity 0.35s ease, background 0.35s ease;
+      transform: translateY(calc(var(--stack-shift, 0px) * 0.12));
     }
 
-    body.dark .hero-card {
-      background: linear-gradient(180deg, rgba(14,24,43,0.95), rgba(12,21,39,0.82));
-    }
-
-    .hero-main-card {
-      inset: auto 2% 0 8%;
-      height: 64%;
-      z-index: 3;
-      transform: translateY(calc(var(--stack-shift, 0px) * 0.12)) rotate(-2deg);
-    }
-
-    .hero-side-card {
-      top: 7%;
-      right: 0;
-      width: 48%;
-      height: 36%;
-      z-index: 4;
-      transform: translateY(calc(var(--stack-shift, 0px) * -0.16)) rotate(8deg);
-    }
-
-    .hero-back-card {
+    .photo-card {
       left: 0;
-      top: 15%;
-      width: 46%;
-      height: 30%;
-      z-index: 1;
-      opacity: 0.82;
-      transform: translateY(calc(var(--stack-shift, 0px) * 0.18)) rotate(-10deg);
+      top: 0;
+      width: 48%;
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 10px;
+      transform: translateY(calc(var(--stack-shift, 0px) * -0.14));
     }
 
-    .hero-bottom-card {
-      right: 8%;
-      bottom: 10%;
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 0.82 / 1;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .photo-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 0 4px 4px;
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 0.96rem;
+    }
+
+    .photo-caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 3px;
+    }
+
+    .badge {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .mini-float {
+      right: 0;
+      top: 4%;
       width: 42%;
-      height: 24%;
-      z-index: 2;
-      opacity: 0.92;
-      transform: translateY(calc(var(--stack-shift, 0px) * -0.12)) rotate(5deg);
+      border-radius: 26px;
+      padding: 16px;
+      transform: translateY(calc(var(--stack-shift, 0px) * 0.16));
     }
 
-    .card-top {
+    .stat-float {
+      right: 2%;
+      bottom: 0;
+      width: 38%;
+      border-radius: 26px;
+      padding: 16px;
+      transform: translateY(calc(var(--stack-shift, 0px) * -0.16));
+    }
+
+    .panel-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -418,92 +432,41 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: rgba(95,105,128,0.34);
+      background: rgba(98,112,138,0.34);
     }
 
-    .card-label {
+    .panel-label {
       color: var(--muted);
       font-size: 0.82rem;
       font-weight: 600;
     }
 
-    .card-body {
+    .panel-body {
       padding: 18px;
       display: grid;
-      gap: 14px;
+      gap: 16px;
     }
 
-    .data-panel,
-    .data-chip,
-    .line-item {
+    .panel-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .surface {
+      padding: 16px;
+      border-radius: 22px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.52);
       box-shadow: var(--shadow-soft);
     }
 
-    body.dark .data-panel,
-    body.dark .data-chip,
-    body.dark .line-item {
-      background: rgba(255,255,255,0.03);
-    }
+    body.dark .surface { background: rgba(255,255,255,0.03); }
 
-    .data-panel {
-      padding: 16px;
-      border-radius: 22px;
-    }
-
-    .data-panel strong {
+    .surface strong {
       display: block;
       margin-bottom: 12px;
-      font-size: 0.95rem;
-    }
-
-    .chart-grid {
-      display: grid;
-      grid-template-columns: repeat(8, 1fr);
-      gap: 8px;
-      align-items: end;
-      height: 110px;
-    }
-
-    .chart-grid span {
-      display: block;
-      border-radius: 999px 999px 8px 8px;
-      background: linear-gradient(180deg, var(--accent), var(--accent-2));
-      opacity: 0.95;
-    }
-
-    .ring-shell {
-      display: grid;
-      place-items: center;
-      padding: 10px;
-    }
-
-    .ring-meter {
-      width: 132px;
-      aspect-ratio: 1;
-      border-radius: 50%;
-      background: conic-gradient(var(--accent) 0 42%, var(--accent-2) 42% 77%, var(--accent-3) 77% 100%);
-      display: grid;
-      place-items: center;
-      box-shadow: inset 0 0 0 14px rgba(255,255,255,0.64);
-    }
-
-    body.dark .ring-meter {
-      box-shadow: inset 0 0 0 14px rgba(8,14,26,0.86);
-    }
-
-    .ring-meter::after {
-      content: "96";
-      display: grid;
-      place-items: center;
-      width: 82px;
-      height: 82px;
-      border-radius: 50%;
-      background: var(--panel-strong);
-      color: var(--text);
-      font-weight: 800;
-      font-size: 1.55rem;
+      font-size: 0.94rem;
     }
 
     .chip-grid {
@@ -512,37 +475,330 @@
       gap: 10px;
     }
 
-    .data-chip {
+    .chip {
       padding: 10px 12px;
       border-radius: 999px;
-      color: var(--text);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.62);
+      box-shadow: var(--shadow-soft);
       font-size: 0.84rem;
       font-weight: 600;
     }
 
-    .line-stack {
+    body.dark .chip { background: rgba(255,255,255,0.04); }
+
+    .bars {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      align-items: end;
+      gap: 8px;
+      height: 110px;
+    }
+
+    .bars span {
+      display: block;
+      border-radius: 999px 999px 10px 10px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+    }
+
+    .list-stack {
       display: grid;
       gap: 10px;
     }
 
-    .line-item {
+    .list-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
       padding: 12px 14px;
       border-radius: 16px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.52);
+      box-shadow: var(--shadow-soft);
       color: var(--muted);
       font-size: 0.9rem;
     }
 
-    .line-item b {
+    body.dark .list-row { background: rgba(255,255,255,0.03); }
+
+    .list-row b {
       color: var(--text);
       font-weight: 700;
     }
 
+    .float-title {
+      margin: 0 0 10px;
+      font-size: 0.96rem;
+    }
+
+    .float-copy {
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
     .section {
-      padding: 64px 0 84px;
+      padding: 34px 0 84px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.06em;
+    }
+
+    .section-head p {
+      margin: 10px 0 0;
+      max-width: 740px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .about-grid,
+    .skills-grid,
+    .education-grid,
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-grid { grid-template-columns: 1.08fr 0.92fr; }
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .education-grid { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr auto; align-items: center; }
+
+    .card {
+      padding: 26px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel), var(--panel-strong));
+      backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.25rem;
+      letter-spacing: -0.04em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.82;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .tag {
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.56);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.84rem;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    body.dark .tag { background: rgba(255,255,255,0.04); }
+
+    .achievement-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .achievement {
+      padding: 14px 16px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.56);
+      box-shadow: var(--shadow-soft);
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    body.dark .achievement { background: rgba(255,255,255,0.03); }
+
+    .achievement b { color: var(--text); }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 25px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--accent), transparent);
+      opacity: 0.35;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-left: 0;
+      padding: 24px 24px 24px 72px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--panel), var(--panel-strong));
+      box-shadow: var(--shadow-soft);
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 28px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 0 0 8px var(--accent-soft);
+    }
+
+    .timeline-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-head h3 {
+      margin: 0;
+      font-size: 1.22rem;
+    }
+
+    .role {
+      display: block;
+      margin-top: 4px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    .date {
+      font-size: 0.92rem;
+      color: var(--muted);
+      white-space: nowrap;
+      padding-top: 4px;
+    }
+
+    .bullet-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .bullet {
+      display: grid;
+      grid-template-columns: 10px 1fr;
+      gap: 12px;
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .bullet::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-top: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+    }
+
+    .bullet b { color: var(--text); }
+
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.56);
+      box-shadow: var(--shadow-soft);
+    }
+
+    body.dark .mini-card { background: rgba(255,255,255,0.03); }
+
+    .mini-card strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 0.96rem;
+    }
+
+    .stack-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .stack-tags span {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.62);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.84rem;
+      font-weight: 600;
+    }
+
+    body.dark .stack-tags span { background: rgba(255,255,255,0.04); }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .stat-box {
+      padding: 18px;
+      border-radius: 22px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.56);
+      box-shadow: var(--shadow-soft);
+    }
+
+    body.dark .stat-box { background: rgba(255,255,255,0.03); }
+
+    .stat-box strong {
+      display: block;
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-box span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.88rem;
+      line-height: 1.55;
     }
 
     .contact-box {
@@ -551,10 +807,6 @@
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       box-shadow: var(--shadow);
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
-      align-items: center;
     }
 
     .contact-box h2 {
@@ -567,19 +819,26 @@
       margin: 14px 0 0;
       color: var(--muted);
       line-height: 1.8;
-      max-width: 700px;
+      max-width: 720px;
+    }
+
+    .contact-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .footer {
-      padding: 30px 0 44px;
+      padding: 20px 0 44px;
       color: var(--muted);
       font-size: 0.92rem;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.8s ease, transform 0.8s ease;
+      transform: translateY(22px);
+      transition: opacity 0.85s ease, transform 0.85s ease;
     }
 
     .reveal.show {
@@ -587,16 +846,24 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 1060px) {
+    @media (max-width: 1100px) {
       .hero-grid,
-      .contact-box {
+      .about-grid,
+      .skills-grid,
+      .education-grid,
+      .contact-grid,
+      .columns {
         grid-template-columns: 1fr;
       }
 
-      .hero-shell,
-      .contact-box { padding: 22px; }
-      .hero-visual { min-height: 560px; }
-      .hero-metrics { grid-template-columns: 1fr; }
+      .hero-highlights,
+      .stats-row,
+      .panel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual { min-height: 620px; }
+      .contact-actions { justify-content: flex-start; }
     }
 
     @media (max-width: 760px) {
@@ -608,28 +875,37 @@
 
       .nav-links { width: 100%; }
       .hero-grid { min-height: auto; }
-      .hero-shell { padding: 18px; border-radius: 28px; }
-      .hero-visual { min-height: 430px; }
-      .hero-main-card { inset: auto 0 0 4%; width: 96%; }
-      .hero-side-card { width: 54%; height: 34%; }
-      .hero-back-card { width: 50%; }
-      .hero-bottom-card { width: 48%; }
-      .contact-box { grid-template-columns: 1fr; }
+      .hero-shell,
+      .card,
+      .timeline-item,
+      .contact-box { padding: 20px; border-radius: 26px; }
+      .hero-visual { min-height: 500px; }
+      .visual-stage { max-width: 100%; }
+      .photo-card { width: 56%; }
+      .mini-float { width: 48%; }
+      .stat-float { width: 45%; }
+      .hero-panel { inset: 16% 0 2% 4%; }
+      .timeline-head { flex-direction: column; }
+      .date { white-space: normal; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
-<body class="light">
+<body>
   <div class="wrap nav">
     <div class="nav-inner">
       <a href="#top" class="brand">
         <div class="brand-mark">AA</div>
         <div class="brand-copy">
-          <strong>Aditya Personal Website</strong>
-          <span>AEO • SEO • GEO Specialist</span>
+          <strong>Aditya Agarwal</strong>
+          <span>AEO • SEO • GEO</span>
         </div>
       </a>
       <div class="nav-links">
-        <a href="#top">Home</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
         <a href="#contact">Contact</a>
         <button class="theme-toggle" id="themeToggle" type="button">Dark mode</button>
       </div>
@@ -640,104 +916,93 @@
     <div class="hero-shell reveal show">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">AEO, SEO and GEO specialist</div>
-          <h1>Building stronger visibility for search, answer engines and the AI web.</h1>
+          <div class="eyebrow">Organic growth marketer for the AI era</div>
+          <h1>Driving discoverability across search, answer engines and generative interfaces.</h1>
           <p>
-            I am Aditya, focused on how content, structure and intent work together to improve discoverability across modern search systems. My interest is in making information clearer, more useful and easier to retrieve across traditional search results, answer-driven experiences and emerging generative interfaces.
+            I am Aditya Agarwal, an AEO, GEO and SEO specialist with experience in content-led acquisition, organic growth and AI search visibility. My work sits at the intersection of search intent, topical authority, technical SEO and the new discovery layer shaped by LLMs.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn primary">Let’s Connect</a>
-            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="btn">LinkedIn</a>
+            <a href="#contact" class="btn primary">Connect with me</a>
+            <a href="mailto:adityaagarwal164@gmail.com" class="btn">Email</a>
           </div>
-          <div class="hero-metrics">
-            <div class="metric">
-              <strong>AEO</strong>
-              <span>Focused on creating content structures that answer clearly and are easier for modern answer surfaces to interpret.</span>
+          <div class="hero-highlights">
+            <div class="highlight">
+              <strong>3+ years</strong>
+              <span>Experience across SEO, AEO, GEO and content-led organic growth.</span>
             </div>
-            <div class="metric">
-              <strong>SEO</strong>
-              <span>Grounded in search intent, page structure, content clarity and stronger topical organization.</span>
+            <div class="highlight">
+              <strong>273%</strong>
+              <span>Organic traffic growth achieved through blog optimization at Nifty.</span>
             </div>
-            <div class="metric">
-              <strong>GEO</strong>
-              <span>Exploring how discoverability changes when AI systems retrieve, summarize and present information.</span>
+            <div class="highlight">
+              <strong>167%</strong>
+              <span>Improvement in LLM visibility by mapping search intent and refining content signals.</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="visual-orbit" id="visualStack">
-            <div class="glow-disc"></div>
-            <div class="glow-disc-2"></div>
-
-            <div class="hero-card hero-back-card">
-              <div class="card-top">
+          <div class="visual-stage" id="visualStack">
+            <div class="hero-panel">
+              <div class="panel-top">
                 <div class="dots"><span></span><span></span><span></span></div>
-                <div class="card-label">Entity Layer</div>
+                <div class="panel-label">Growth Intelligence</div>
               </div>
-              <div class="card-body ring-shell">
-                <div class="ring-meter"></div>
-              </div>
-            </div>
-
-            <div class="hero-card hero-side-card">
-              <div class="card-top">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div class="card-label">Signal Stack</div>
-              </div>
-              <div class="card-body">
-                <div class="chip-grid">
-                  <div class="data-chip">Semantic clarity</div>
-                  <div class="data-chip">Intent structure</div>
-                  <div class="data-chip">Entity authority</div>
-                  <div class="data-chip">AI retrieval</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-card hero-bottom-card">
-              <div class="card-top">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div class="card-label">Question Paths</div>
-              </div>
-              <div class="card-body">
-                <div class="line-stack">
-                  <div class="line-item"><span>Questions</span><b>Clear intent</b></div>
-                  <div class="line-item"><span>Structure</span><b>Useful pages</b></div>
-                  <div class="line-item"><span>Discovery</span><b>Better retrieval</b></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="hero-card hero-main-card">
-              <div class="card-top">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div class="card-label">Visibility Intelligence</div>
-              </div>
-              <div class="card-body">
-                <div class="data-panel">
-                  <strong>Visibility signals</strong>
-                  <div class="chart-grid">
-                    <span style="height:36%"></span>
-                    <span style="height:50%"></span>
-                    <span style="height:42%"></span>
-                    <span style="height:66%"></span>
-                    <span style="height:58%"></span>
-                    <span style="height:84%"></span>
-                    <span style="height:76%"></span>
-                    <span style="height:94%"></span>
+              <div class="panel-body">
+                <div class="panel-grid">
+                  <div class="surface">
+                    <strong>Visibility growth</strong>
+                    <div class="bars">
+                      <span style="height:30%"></span>
+                      <span style="height:40%"></span>
+                      <span style="height:38%"></span>
+                      <span style="height:56%"></span>
+                      <span style="height:62%"></span>
+                      <span style="height:74%"></span>
+                      <span style="height:86%"></span>
+                      <span style="height:94%"></span>
+                    </div>
+                  </div>
+                  <div class="surface">
+                    <strong>Focus areas</strong>
+                    <div class="chip-grid">
+                      <div class="chip">Search intent mapping</div>
+                      <div class="chip">Topical authority</div>
+                      <div class="chip">E-E-A-T</div>
+                      <div class="chip">AI visibility</div>
+                    </div>
                   </div>
                 </div>
-                <div class="data-panel">
-                  <strong>Core layers</strong>
-                  <div class="chip-grid">
-                    <div class="data-chip">Content structure</div>
-                    <div class="data-chip">Search intent</div>
-                    <div class="data-chip">Entity clarity</div>
-                    <div class="data-chip">AI discoverability</div>
+                <div class="surface">
+                  <strong>How I work</strong>
+                  <div class="list-stack">
+                    <div class="list-row"><span>Content systems</span><b>Built for clarity</b></div>
+                    <div class="list-row"><span>Technical SEO</span><b>Better crawling and structure</b></div>
+                    <div class="list-row"><span>Organic growth</span><b>Aligned with user intent</b></div>
                   </div>
                 </div>
               </div>
+            </div>
+
+            <div class="photo-card">
+              <img src="aditya-photo.jpg" alt="Portrait of Aditya Agarwal" />
+              <div class="photo-caption">
+                <div>
+                  <strong>Aditya Agarwal</strong>
+                  <span>AEO, GEO, SEO</span>
+                </div>
+                <div class="badge">Open to work</div>
+              </div>
+            </div>
+
+            <div class="mini-float">
+              <h3 class="float-title">Current role</h3>
+              <p class="float-copy">Marketing Associate at Nifty Technologies, working on organic growth, content optimization, technical SEO and AI search visibility.</p>
+            </div>
+
+            <div class="stat-float">
+              <h3 class="float-title">Growth signals</h3>
+              <p class="float-copy">8x signup growth, 80+ backlinks and stronger visibility across search and LLM-driven discovery.</p>
             </div>
           </div>
         </div>
@@ -745,23 +1010,205 @@
     </div>
   </header>
 
+  <section class="section wrap reveal" id="about">
+    <div class="section-head">
+      <div>
+        <h2>About</h2>
+        <p>I work on organic growth with a strong focus on how search is evolving. My approach combines SEO fundamentals, content systems and AI-era discoverability to create clearer paths from search intent to acquisition.</p>
+      </div>
+    </div>
+    <div class="about-grid">
+      <div class="card">
+        <h3>What I focus on</h3>
+        <p>I enjoy building growth systems that connect content, technical SEO and information architecture. That means improving visibility not only in traditional search results, but also in answer-driven experiences and generative search environments.</p>
+        <div class="tag-row">
+          <div class="tag">AEO</div>
+          <div class="tag">SEO</div>
+          <div class="tag">GEO</div>
+          <div class="tag">Content-led acquisition</div>
+          <div class="tag">Topical clustering</div>
+          <div class="tag">Technical SEO</div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Selected outcomes</h3>
+        <div class="achievement-list">
+          <div class="achievement"><b>273% increase in organic traffic</b> through blog optimization and content improvements.</div>
+          <div class="achievement"><b>8x growth in signups</b> within 6 months by aligning content and organic acquisition.</div>
+          <div class="achievement"><b>167% improvement in LLM visibility</b> by mapping search intent and strengthening discoverability.</div>
+          <div class="achievement"><b>80+ high-authority backlinks</b> acquired through outreach and placement efforts.</div>
+        </div>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div class="stat-box"><strong>80+</strong><span>High-authority backlinks from platforms including G2 and other relevant placements.</span></div>
+      <div class="stat-box"><strong>Page 1</strong><span>Improved rankings from page 5 to page 1 through on-page and technical SEO work.</span></div>
+      <div class="stat-box"><strong>3x</strong><span>Organic traffic increase achieved in an earlier internship role through SEO and content optimization.</span></div>
+      <div class="stat-box"><strong>MOFU</strong><span>Experience ranking conversion-focused middle-of-funnel keywords for signups.</span></div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="experience">
+    <div class="section-head">
+      <div>
+        <h2>Experience</h2>
+        <p>My recent work has centered on SaaS growth, content optimization, technical SEO and stronger visibility across both traditional search and AI-influenced discovery channels.</p>
+      </div>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item">
+        <div class="timeline-head">
+          <div>
+            <h3>Nifty Technologies (SaaS)</h3>
+            <span class="role">Marketing Associate</span>
+          </div>
+          <div class="date">Aug 2023 – Present</div>
+        </div>
+        <div class="bullet-list">
+          <div class="bullet"><div><b>Optimized blogs driving 273% increase in organic traffic</b> and <b>8x growth in signups</b> within 6 months.</div></div>
+          <div class="bullet"><div>Did keyword clustering using ChatGPT and built topical clusters.</div></div>
+          <div class="bullet"><div>Built and scaled outreach systems, acquiring <b>80+ high-authority backlinks</b> from platforms like G2.</div></div>
+          <div class="bullet"><div>Drove <b>167% improvement in LLM visibility</b> by mapping search intent.</div></div>
+          <div class="bullet"><div>Fixed major technical errors and improved crawling, indexation gaps and site structure issues through sitemap and robots.txt updates.</div></div>
+          <div class="bullet"><div>Improved internal linking to better map user journey and acquisition funnel.</div></div>
+          <div class="bullet"><div>Found and engaged in relevant subreddits to improve brand awareness and AEO visibility.</div></div>
+          <div class="bullet"><div>Ranked in <b>1st position for MOFU keywords</b> to support conversions.</div></div>
+          <div class="bullet"><div>Created LinkedIn posts for content distribution and product update announcements.</div></div>
+          <div class="bullet"><div>Strengthened E-E-A-T signals through optimizing author bios and citing original data.</div></div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-head">
+          <div>
+            <h3>Nifty Technologies (SaaS)</h3>
+            <span class="role">Marketing Intern</span>
+          </div>
+          <div class="date">Jan 2023 – Jul 2023</div>
+        </div>
+        <div class="bullet-list">
+          <div class="bullet"><div>Improved organic position in SERPs by fixing titles and descriptions.</div></div>
+          <div class="bullet"><div>Performed keyword research and clustering focused on TOFU, MOFU and BOFU content across the funnel.</div></div>
+          <div class="bullet"><div>Improved rankings from <b>page 5 to page 1</b> within weeks through on-page and technical optimizations.</div></div>
+          <div class="bullet"><div>Secured placements of Nifty on top-ranking listicle articles.</div></div>
+        </div>
+      </article>
+
+      <article class="timeline-item">
+        <div class="timeline-head">
+          <div>
+            <h3>Probsol Technology</h3>
+            <span class="role">Digital Marketing Intern</span>
+          </div>
+          <div class="date">Sep 2022 – Dec 2022</div>
+        </div>
+        <div class="bullet-list">
+          <div class="bullet"><div>Increased organic traffic by <b>3x within 6 months</b> through SEO and content optimization.</div></div>
+          <div class="bullet"><div>Conducted technical audits and resolved indexing and on-page SEO issues.</div></div>
+          <div class="bullet"><div>Assisted in building foundational SEO workflows and strategies.</div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="skills">
+    <div class="section-head">
+      <div>
+        <h2>Skills and stack</h2>
+        <p>My toolkit combines search strategy, technical SEO, content thinking and modern AI tools that support clustering, research and execution.</p>
+      </div>
+    </div>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Core skills</h3>
+        <div class="stack-tags">
+          <span>Search Intent Mapping</span>
+          <span>Topical Authority</span>
+          <span>E-E-A-T Optimization</span>
+          <span>Programmatic SEO</span>
+          <span>Robots.txt & Crawl Control</span>
+          <span>Internal Linking</span>
+          <span>Site Architecture</span>
+          <span>Core Web Vitals</span>
+          <span>Page Experience</span>
+          <span>Schema Markup</span>
+          <span>Structured Data</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3>AI and marketing stack</h3>
+        <div class="stack-tags">
+          <span>ChatGPT</span>
+          <span>Perplexity</span>
+          <span>Claude</span>
+          <span>SurferSEO</span>
+          <span>Ahrefs</span>
+          <span>Moz</span>
+          <span>Screaming Frog</span>
+          <span>Google Search Console</span>
+          <span>Canva</span>
+          <span>Publer</span>
+          <span>GA4</span>
+        </div>
+      </div>
+    </div>
+    <div class="columns">
+      <div class="mini-card">
+        <strong>Certifications</strong>
+        <div class="achievement-list">
+          <div class="achievement">SEO Certification – HubSpot</div>
+          <div class="achievement">Google Ads Certification – Google Skillshop</div>
+          <div class="achievement">Fundamentals of Digital Marketing – Google</div>
+          <div class="achievement">Content Marketing – Great Learning</div>
+        </div>
+      </div>
+      <div class="mini-card">
+        <strong>Languages</strong>
+        <div class="achievement-list">
+          <div class="achievement">English</div>
+          <div class="achievement">Hindi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap reveal" id="education">
+    <div class="section-head">
+      <div>
+        <h2>Education</h2>
+        <p>My education combines commerce and computer application foundations, which complements the way I think about growth, systems and digital execution.</p>
+      </div>
+    </div>
+    <div class="education-grid">
+      <div class="card">
+        <h3>Bachelor's in Commerce (Marketing)</h3>
+        <p>Jiwaji University<br>2019 – 2022</p>
+      </div>
+      <div class="card">
+        <h3>Diploma in Computer Application</h3>
+        <p>Makhanlal Chaturvedi University<br>2019 – 2020<br>Grade: 3.8 / 4.0</p>
+      </div>
+    </div>
+  </section>
+
   <section class="section wrap reveal" id="contact">
     <div class="contact-box">
-      <div>
-        <h2>Open to meaningful opportunities</h2>
-        <p>
-          I am building my personal presence around AEO, SEO and GEO with a focus on clear strategy, structured content and AI-era discoverability. If you are hiring, collaborating or just want to connect around modern organic growth, feel free to reach out.
-        </p>
-      </div>
-      <div class="hero-actions">
-        <a class="btn primary" href="mailto:hello@adityapersonalwebsite.com">Email Me</a>
-        <a class="btn" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+      <div class="contact-grid">
+        <div>
+          <h2>Open to meaningful opportunities</h2>
+          <p>I am currently building my personal brand around AEO, GEO, SEO and organic growth. If you are hiring, looking for collaboration or want to talk about AI-first discoverability, I would be happy to connect.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="btn primary" href="mailto:adityaagarwal164@gmail.com">adityaagarwal164@gmail.com</a>
+          <a class="btn" href="tel:+919131138664">+91 9131138664</a>
+          <a class="btn" href="https://linkedin.com/in/aditya-agrawinal001" target="_blank" rel="noreferrer">LinkedIn</a>
+        </div>
       </div>
     </div>
   </section>
 
   <footer class="wrap footer">
-    © 2026 Aditya Personal Website. Designed as a clean modern single-page portfolio.
+    © 2026 Aditya Agarwal. Built as a modern personal portfolio for AEO, GEO and SEO.
   </footer>
 
   <script>
@@ -793,7 +1240,7 @@
     function updateScrollEffects() {
       if (visualStack) {
         const top = window.scrollY || window.pageYOffset;
-        const shift = Math.sin(top / 280) * 18;
+        const shift = Math.sin(top / 260) * 18;
         visualStack.style.setProperty('--stack-shift', `${shift}px`);
       }
     }
