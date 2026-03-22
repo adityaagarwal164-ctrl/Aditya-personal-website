@@ -233,15 +233,17 @@
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.98fr);
-      gap: 36px;
+      grid-template-columns: minmax(0, 1.08fr) minmax(360px, 0.92fr);
+      gap: 40px;
       align-items: center;
-      min-height: 760px;
+      min-height: 700px;
     }
 
     .hero-copy {
-      max-width: 620px;
-      padding: 10px 2px;
+      max-width: 640px;
+      padding: 6px 2px;
+      position: relative;
+      z-index: 2;
     }
 
     .eyebrow {
@@ -273,18 +275,18 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.6rem, 5.2vw, 4.9rem);
-      line-height: 0.98;
-      letter-spacing: -0.065em;
-      max-width: 680px;
+      font-size: clamp(2.7rem, 5vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.07em;
+      max-width: 720px;
     }
 
     .hero-copy p {
       color: var(--muted);
-      line-height: 1.78;
-      font-size: 1rem;
-      margin: 20px 0 0;
-      max-width: 580px;
+      line-height: 1.82;
+      font-size: 1.02rem;
+      margin: 22px 0 0;
+      max-width: 600px;
     }
 
     .hero-actions {
@@ -297,13 +299,13 @@
     .hero-highlights {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 26px;
+      gap: 14px;
+      margin-top: 30px;
     }
 
     .highlight {
-      padding: 16px;
-      border-radius: 20px;
+      padding: 18px;
+      border-radius: 22px;
       border: 1px solid var(--line);
       background: rgba(255,255,255,0.58);
       box-shadow: var(--shadow-soft);
@@ -334,29 +336,32 @@
 
     .hero-visual {
       position: relative;
-      min-height: 620px;
+      min-height: 560px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 8px 0;
+      padding: 0;
     }
 
     .visual-stage {
       position: relative;
       width: 100%;
-      max-width: 560px;
-      min-height: 600px;
+      max-width: 500px;
+      min-height: 520px;
       isolation: isolate;
     }
 
     .visual-stage::before {
       content: "";
       position: absolute;
-      inset: 8% 10% 12% 14%;
+      inset: 6% 8% 10% 8%;
       border-radius: 40px;
-      background: radial-gradient(circle at 50% 30%, rgba(52,109,255,0.14), transparent 46%), radial-gradient(circle at 70% 80%, rgba(140,99,255,0.14), transparent 34%);
-      filter: blur(10px);
-      opacity: 0.85;
+      background:
+        radial-gradient(circle at 22% 18%, rgba(52,109,255,0.22), transparent 32%),
+        radial-gradient(circle at 82% 20%, rgba(140,99,255,0.22), transparent 30%),
+        radial-gradient(circle at 52% 84%, rgba(24,199,200,0.16), transparent 26%);
+      filter: blur(16px);
+      opacity: 0.95;
       z-index: 0;
     }
 
@@ -364,84 +369,12 @@
     .photo-card,
     .mini-float,
     .stat-float {
-      position: absolute;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.76));
-      backdrop-filter: blur(20px);
-      box-shadow: var(--shadow);
-    }
-
-    body.dark .hero-panel,
-    body.dark .photo-card,
-    body.dark .mini-float,
-    body.dark .stat-float {
-      background: linear-gradient(180deg, rgba(13,22,40,0.94), rgba(10,18,34,0.82));
-    }
-
-    .hero-panel {
-      inset: 16% 4% 4% 14%;
-      border-radius: 34px;
-      overflow: hidden;
-      transform: translate3d(0, calc(var(--stack-shift, 0px) * 0.10), 0);
-      z-index: 1;
-    }
-
-    .photo-card {
-      left: 0;
-      top: 2%;
-      width: 42%;
-      border-radius: 30px;
-      overflow: hidden;
-      padding: 10px;
-      transform: translate3d(0, calc(var(--stack-shift, 0px) * -0.08), 0);
-      z-index: 3;
-    }
-
-    .photo-card img {
-      width: 100%;
-      aspect-ratio: 0.82 / 1;
-      object-fit: cover;
-      border-radius: 24px;
-    }
-
-    .photo-caption {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      margin-top: 12px;
-      padding: 0 4px 4px;
-    }
-
-    .photo-caption strong {
-      display: block;
-      font-size: 0.96rem;
-    }
-
-    .photo-caption span {
-      display: block;
-      color: var(--muted);
-      font-size: 0.82rem;
-      margin-top: 3px;
-    }
-
-    .badge {
-      padding: 10px 12px;
-      border-radius: 999px;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: #fff;
-      font-weight: 700;
-      font-size: 0.8rem;
-      white-space: nowrap;
-    }
-
-    .mini-float {
-      right: 1%;
-      top: 7%;
-      width: 36%;
-      border-radius: 24px;
-      padding: 15px;
-      transform: translate3d(0, calc(var(--stack-shift, 0px) * 0.08), 0);
+      left: 6%;
+      bottom: 2%;
+      width: 38%;
+      border-radius: 22px;
+      padding: 14px;
+      transform: translate3d(0, calc(var(--stack-shift, 0px) * -0.04), 0);
       z-index: 4;
     }
 
@@ -485,8 +418,8 @@
 
     .panel-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: 1fr;
+      gap: 14px;
     }
 
     .surface {
@@ -528,7 +461,7 @@
       grid-template-columns: repeat(8, 1fr);
       align-items: end;
       gap: 8px;
-      height: 110px;
+      height: 88px;
     }
 
     .bars span {
@@ -564,14 +497,14 @@
     }
 
     .float-title {
-      margin: 0 0 10px;
-      font-size: 0.96rem;
+      margin: 0 0 8px;
+      font-size: 0.92rem;
     }
 
     .float-copy {
       color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.9rem;
+      line-height: 1.58;
+      font-size: 0.86rem;
       margin: 0;
     }
 
@@ -932,6 +865,8 @@
 
     @keyframes floatCard {
       0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+    }
       50% { transform: translateY(-8px); }
     }
 
@@ -944,6 +879,22 @@
       .columns {
         grid-template-columns: 1fr;
       }
+
+      .hero-highlights,
+      .stats-row,
+      .panel-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy { max-width: 100%; }
+      .hero-visual { min-height: 540px; }
+      .visual-stage { max-width: 540px; min-height: 520px; }
+      .hero-panel { inset: 16% 2% 2% 10%; }
+      .photo-card { width: 40%; }
+      .mini-float { width: 30%; }
+      .stat-float { width: 34%; left: 4%; }
+      .contact-actions { justify-content: flex-start; }
+    }
 
       .hero-highlights,
       .stats-row,
@@ -967,6 +918,30 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .nav-links { width: 100%; }
+      .hero-grid { min-height: auto; gap: 24px; }
+      .hero-shell,
+      .card,
+      .timeline-item,
+      .contact-box { padding: 20px; border-radius: 26px; }
+
+      h1 {
+        font-size: clamp(2.3rem, 10vw, 3.7rem);
+        max-width: 100%;
+      }
+
+      .hero-copy p { font-size: 0.96rem; }
+      .hero-visual { min-height: 520px; }
+      .visual-stage { max-width: 100%; min-height: 500px; }
+      .photo-card { width: 44%; top: 0; }
+      .mini-float { width: 32%; top: 7%; }
+      .stat-float { width: 36%; left: 4%; bottom: 1%; }
+      .hero-panel { inset: 18% 0 2% 10%; }
+      .timeline-head { flex-direction: column; }
+      .date { white-space: normal; }
+      .stats-row { grid-template-columns: 1fr 1fr; }
+    }
 
       .nav-links { width: 100%; }
       .hero-grid { min-height: auto; gap: 20px; }
@@ -994,6 +969,41 @@
 
     @media (max-width: 560px) {
       .hero-shell { padding: 16px; }
+      .hero-highlights,
+      .stats-row { grid-template-columns: 1fr; }
+      .hero-visual { min-height: auto; }
+      .visual-stage {
+        min-height: auto;
+        display: grid;
+        gap: 14px;
+      }
+
+      .hero-panel,
+      .photo-card,
+      .mini-float,
+      .stat-float {
+        position: relative;
+        inset: auto;
+        left: auto;
+        right: auto;
+        top: auto;
+        bottom: auto;
+        width: 100%;
+        transform: none !important;
+      }
+
+      .photo-card { order: 1; }
+      .mini-float { order: 2; }
+      .hero-panel { order: 3; }
+      .stat-float { order: 4; }
+
+      .photo-caption {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .badge { padding: 8px 10px; }
+    }
       .hero-highlights,
       .stats-row { grid-template-columns: 1fr; }
       .hero-visual { min-height: 620px; }
@@ -1082,9 +1092,9 @@
                   <div class="surface">
                     <strong>Focus areas</strong>
                     <div class="chip-grid">
-                      <div class="chip">Search intent mapping</div>
-                      <div class="chip">Topical authority</div>
-                      <div class="chip">E-E-A-T</div>
+                      <div class="chip">AEO</div>
+                      <div class="chip">SEO</div>
+                      <div class="chip">GEO</div>
                       <div class="chip">AI visibility</div>
                     </div>
                   </div>
@@ -1092,10 +1102,12 @@
                 <div class="surface">
                   <strong>How I work</strong>
                   <div class="list-stack">
-                    <div class="list-row"><span>Content systems</span><b>Built for clarity</b></div>
-                    <div class="list-row"><span>Technical SEO</span><b>Better crawling and structure</b></div>
-                    <div class="list-row"><span>Organic growth</span><b>Aligned with user intent</b></div>
+                    <div class="list-row"><span>Search intent</span><b>Clear mapping</b></div>
+                    <div class="list-row"><span>Content systems</span><b>Topic depth</b></div>
+                    <div class="list-row"><span>Technical SEO</span><b>Stronger structure</b></div>
                   </div>
+                </div>
+              </div>
                 </div>
               </div>
             </div>
@@ -1113,12 +1125,12 @@
 
             <div class="mini-float hero-float hero-float-fast">
               <h3 class="float-title">Current role</h3>
-              <p class="float-copy">Marketing Associate at Nifty Technologies, working on organic growth, content optimization, technical SEO and AI search visibility.</p>
+              <p class="float-copy">Marketing Associate at Nifty, focused on SEO, organic growth and AI search visibility.</p>
             </div>
 
             <div class="stat-float hero-float hero-float-slow">
-              <h3 class="float-title">Growth signals</h3>
-              <p class="float-copy">8x signup growth, 80+ backlinks and stronger visibility across search and LLM-driven discovery.</p>
+              <h3 class="float-title">Key wins</h3>
+              <p class="float-copy">273% organic traffic growth, 8x signup growth and stronger LLM visibility.</p>
             </div>
           </div>
         </div>
@@ -1359,7 +1371,7 @@
     function updateScrollEffects() {
       if (visualStack) {
         const top = window.scrollY || window.pageYOffset;
-        const shift = Math.sin(top / 300) * 10;
+        const shift = Math.sin(top / 320) * 6;
         visualStack.style.setProperty('--stack-shift', `${shift}px`);
       }
     }
