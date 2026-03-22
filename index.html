@@ -10,13 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f5f7fb;
-      --bg-soft: #eef2ff;
-      --panel: rgba(255,255,255,0.78);
+      --bg: #f4f7fb;
+      --bg-soft: #eef4ff;
+      --panel: rgba(255,255,255,0.76);
       --panel-strong: rgba(255,255,255,0.94);
       --card: #ffffff;
       --text: #0f172a;
-      --muted: #5f6b85;
+      --muted: #61708c;
       --line: rgba(15, 23, 42, 0.08);
       --line-strong: rgba(15, 23, 42, 0.12);
       --shadow: 0 24px 60px rgba(15, 23, 42, 0.10);
@@ -230,7 +230,7 @@
     .hero-box {
       position: relative;
       overflow: hidden;
-      padding: 28px;
+      padding: 34px;
       border-radius: 34px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
@@ -243,9 +243,9 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 15% 18%, rgba(79,70,229,0.14), transparent 26%),
-        radial-gradient(circle at 86% 20%, rgba(6,182,212,0.14), transparent 24%),
-        radial-gradient(circle at 72% 86%, rgba(139,92,246,0.12), transparent 24%);
+        radial-gradient(circle at 15% 18%, rgba(79,70,229,0.12), transparent 26%),
+        radial-gradient(circle at 86% 20%, rgba(6,182,212,0.12), transparent 24%),
+        radial-gradient(circle at 72% 86%, rgba(139,92,246,0.10), transparent 24%);
       pointer-events: none;
       animation: pulseBg 14s ease-in-out infinite alternate;
     }
@@ -253,8 +253,8 @@
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(360px, 0.98fr);
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
+      gap: 42px;
       align-items: center;
     }
 
@@ -286,10 +286,13 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.6rem, 5vw, 5rem);
-      line-height: 0.98;
-      letter-spacing: -0.06em;
-      max-width: 680px;
+      font-size: clamp(3rem, 6vw, 6rem);
+      line-height: 0.92;
+      letter-spacing: -0.08em;
+      max-width: 760px;
+      word-break: normal;
+      overflow-wrap: anywhere;
+      text-wrap: balance;
     }
 
     .gradient-text {
@@ -299,25 +302,25 @@
     }
 
     .hero-copy p {
-      margin: 20px 0 0;
-      max-width: 600px;
+      margin: 22px 0 0;
+      max-width: 620px;
       color: var(--muted);
       line-height: 1.82;
-      font-size: 1rem;
+      font-size: 1.02rem;
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .hero-metrics {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 26px;
+      margin-top: 28px;
       max-width: 760px;
     }
 
@@ -353,35 +356,27 @@
 
     .hero-stage {
       position: relative;
-      min-height: 620px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
 
-    .visual-board {
-      position: relative;
-      width: 100%;
-      max-width: 540px;
-      min-height: 580px;
+    .hero-visual-shell {
+      display: grid;
+      gap: 18px;
     }
 
-    .glass {
-      position: absolute;
+    .visual-card {
       border-radius: 28px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       backdrop-filter: blur(18px);
-      box-shadow: var(--shadow);
+      box-shadow: var(--shadow-soft);
     }
 
-    .profile-panel {
-      top: 0;
-      left: 0;
-      width: 250px;
-      padding: 14px;
-      z-index: 4;
-      animation: floatSoft 7.5s ease-in-out infinite;
+    .profile-card {
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 16px;
+      align-items: center;
     }
 
     .profile-photo {
@@ -391,20 +386,16 @@
       border-radius: 22px;
     }
 
-    .profile-copy {
-      margin-top: 14px;
-    }
-
     .profile-copy strong {
       display: block;
-      font-size: 1.6rem;
-      line-height: 1.05;
-      letter-spacing: -0.04em;
+      font-size: 1.8rem;
+      line-height: 1.02;
+      letter-spacing: -0.05em;
     }
 
     .profile-copy span {
       display: block;
-      margin-top: 6px;
+      margin-top: 8px;
       color: var(--muted);
       font-weight: 600;
     }
@@ -420,6 +411,7 @@
       border: 1px solid rgba(16,185,129,0.18);
       color: var(--success);
       font-weight: 700;
+      width: fit-content;
     }
 
     .status-pill::before {
@@ -431,38 +423,36 @@
       box-shadow: 0 0 0 6px rgba(16,185,129,0.10);
     }
 
-    .story-panel {
-      top: 70px;
-      right: 0;
-      width: 250px;
-      padding: 20px;
-      z-index: 3;
-      animation: floatSoft 6.4s ease-in-out infinite;
+    .visual-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .story-panel,
+    .chart-panel,
+    .ring-panel,
+    .result-panel {
+      padding: 22px;
     }
 
     .story-panel h3,
     .result-panel h3,
-    .chart-panel h3 {
+    .chart-panel h3,
+    .ring-panel h3 {
       margin: 0 0 10px;
       font-size: 1.02rem;
       letter-spacing: -0.03em;
     }
 
     .story-panel p,
-    .result-panel p {
+    .result-panel p,
+    .ring-panel p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.72;
       font-size: 0.95rem;
-    }
-
-    .chart-panel {
-      left: 84px;
-      top: 180px;
-      width: 370px;
-      padding: 20px;
-      z-index: 2;
-      animation: floatSoft 8.6s ease-in-out infinite;
     }
 
     .panel-top {
@@ -512,15 +502,6 @@
       font-size: 0.84rem;
     }
 
-    .result-panel {
-      left: 110px;
-      bottom: 0;
-      width: 320px;
-      padding: 20px;
-      z-index: 3;
-      animation: floatSoft 7.2s ease-in-out infinite;
-    }
-
     .focus-list {
       display: grid;
       gap: 10px;
@@ -540,8 +521,84 @@
     }
 
     body.dark .focus-item { background: rgba(255,255,255,0.04); }
-
     .focus-item strong { color: var(--text); }
+
+    .tool-ring-wrap {
+      display: grid;
+      place-items: center;
+      padding: 10px 0 2px;
+    }
+
+    .tool-ring {
+      position: relative;
+      width: 290px;
+      height: 290px;
+      display: grid;
+      place-items: center;
+    }
+
+    .tool-ring::before {
+      content: "";
+      position: absolute;
+      inset: 22px;
+      border-radius: 50%;
+      border: 1px dashed var(--line-strong);
+      animation: spin 22s linear infinite;
+    }
+
+    .tool-ring::after {
+      content: "";
+      position: absolute;
+      inset: 54px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--accent-soft), transparent 70%);
+      pointer-events: none;
+    }
+
+    .ring-center {
+      position: relative;
+      z-index: 2;
+      width: 128px;
+      height: 128px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 20px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: white;
+      box-shadow: 0 20px 40px rgba(79, 70, 229, 0.24);
+    }
+
+    .orbit {
+      position: absolute;
+      inset: 0;
+      animation: spin 22s linear infinite;
+    }
+
+    .tool-chip {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform:
+        rotate(var(--angle))
+        translateY(-132px)
+        rotate(calc(var(--angle) * -1));
+      transform-origin: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.86);
+      box-shadow: var(--shadow-soft);
+      font-size: 0.84rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    body.dark .tool-chip { background: rgba(12,20,38,0.94); }
 
     .section {
       padding: 34px 0 74px;
@@ -868,23 +925,17 @@
       100% { transform: scale(1.06) translate(-10px, 10px); }
     }
 
-    @keyframes floatSoft {
-      0%, 100% { transform: translateY(0px); }
-      50% { transform: translateY(-8px); }
-    }
-
     @keyframes growIn {
-      from {
-        transform: scaleY(0.35);
-        opacity: 0.45;
-      }
-      to {
-        transform: scaleY(1);
-        opacity: 1;
-      }
+      from { transform: scaleY(0.35); opacity: 0.45; }
+      to { transform: scaleY(1); opacity: 1; }
     }
 
-    @media (max-width: 1100px) {
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 1180px) {
       .hero-grid,
       .grid-2,
       .skill-grid,
@@ -894,27 +945,29 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-metrics { grid-template-columns: 1fr; max-width: 100%; }
+      .hero-metrics { max-width: 100%; }
       .contact-actions { justify-content: flex-start; }
-      .hero-stage { min-height: auto; }
-      .visual-board {
-        min-height: auto;
-        display: grid;
-        gap: 16px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .visual-grid,
+      .profile-card {
+        grid-template-columns: 1fr;
       }
 
-      .glass,
-      .profile-panel,
-      .story-panel,
-      .chart-panel,
-      .result-panel {
-        position: relative;
-        inset: auto;
-        width: 100%;
-        left: auto;
-        right: auto;
-        top: auto;
-        bottom: auto;
+      h1 {
+        font-size: clamp(2.5rem, 9vw, 4.6rem);
+        line-height: 0.96;
+      }
+
+      .hero-metrics { grid-template-columns: 1fr; }
+      .tool-ring {
+        width: 260px;
+        height: 260px;
+      }
+      .tool-chip {
+        transform: rotate(var(--angle)) translateY(-118px) rotate(calc(var(--angle) * -1));
       }
     }
 
@@ -930,18 +983,36 @@
       .card,
       .timeline-item,
       .contact-box,
-      .proof-card { padding: 20px; border-radius: 24px; }
-      h1 { font-size: clamp(2.4rem, 10vw, 3.8rem); }
+      .proof-card,
+      .visual-card { padding: 20px; border-radius: 24px; }
       .timeline-head { flex-direction: column; }
       .date { white-space: normal; }
+      .profile-copy strong { font-size: 1.4rem; }
     }
 
     @media (max-width: 560px) {
       .hero { padding-top: 24px; }
       .wrap { width: min(var(--max), calc(100% - 20px)); }
       .hero-box { padding: 16px; }
-      .profile-copy strong { font-size: 1.35rem; }
+      h1 {
+        font-size: clamp(2.2rem, 12vw, 3.6rem);
+        letter-spacing: -0.06em;
+      }
       .proof-card strong { font-size: 1.8rem; }
+      .tool-ring {
+        width: 220px;
+        height: 220px;
+      }
+      .ring-center {
+        width: 110px;
+        height: 110px;
+        font-size: 0.9rem;
+      }
+      .tool-chip {
+        padding: 8px 10px;
+        font-size: 0.76rem;
+        transform: rotate(var(--angle)) translateY(-98px) rotate(calc(var(--angle) * -1));
+      }
     }
   </style>
 </head>
@@ -1003,8 +1074,8 @@
         </div>
 
         <div class="hero-stage">
-          <div class="visual-board">
-            <div class="glass profile-panel">
+          <div class="hero-visual-shell">
+            <div class="visual-card profile-card">
               <img class="profile-photo" src="aditya-photo.jpg" alt="Portrait of Aditya Agarwal">
               <div class="profile-copy">
                 <strong>Aditya Agarwal</strong>
@@ -1013,39 +1084,59 @@
               </div>
             </div>
 
-            <div class="glass story-panel">
-              <h3>Current role</h3>
-              <p>Marketing Associate at Nifty, focused on organic growth, AI search visibility, content systems and acquisition-led SEO.</p>
-            </div>
+            <div class="visual-grid">
+              <div class="visual-card story-panel">
+                <h3>Current role</h3>
+                <p>Marketing Associate at Nifty, focused on organic growth, AI search visibility, content systems and acquisition-led SEO.</p>
+              </div>
 
-            <div class="glass chart-panel">
-              <div class="panel-top">
-                <div class="dots"><span></span><span></span><span></span></div>
-                <div>Growth snapshot</div>
+              <div class="visual-card chart-panel">
+                <div class="panel-top">
+                  <div class="dots"><span></span><span></span><span></span></div>
+                  <div>Growth snapshot</div>
+                </div>
+                <h3>Visibility growth</h3>
+                <div class="bars">
+                  <span style="height: 28%"></span>
+                  <span style="height: 40%"></span>
+                  <span style="height: 52%"></span>
+                  <span style="height: 66%"></span>
+                  <span style="height: 74%"></span>
+                  <span style="height: 88%"></span>
+                  <span style="height: 100%"></span>
+                </div>
+                <div class="chart-caption">
+                  <span>Search → trust → conversion</span>
+                  <span>Compounding growth</span>
+                </div>
               </div>
-              <h3>Visibility growth</h3>
-              <div class="bars">
-                <span style="height: 28%"></span>
-                <span style="height: 40%"></span>
-                <span style="height: 52%"></span>
-                <span style="height: 66%"></span>
-                <span style="height: 74%"></span>
-                <span style="height: 88%"></span>
-                <span style="height: 100%"></span>
-              </div>
-              <div class="chart-caption">
-                <span>Search → trust → conversion</span>
-                <span>Compounding growth</span>
-              </div>
-            </div>
 
-            <div class="glass result-panel">
-              <h3>How I work</h3>
-              <p>Blending search intent, topical authority, technical SEO and content design to improve visibility across both classic search and AI-driven experiences.</p>
-              <div class="focus-list">
-                <div class="focus-item"><span>Search intent</span><strong>Mapped well</strong></div>
-                <div class="focus-item"><span>Content systems</span><strong>Built deeply</strong></div>
-                <div class="focus-item"><span>Technical SEO</span><strong>Fixed cleanly</strong></div>
+              <div class="visual-card result-panel">
+                <h3>How I work</h3>
+                <p>Blending search intent, topical authority, technical SEO and content design to improve visibility across both classic search and AI-driven experiences.</p>
+                <div class="focus-list">
+                  <div class="focus-item"><span>Search intent</span><strong>Mapped well</strong></div>
+                  <div class="focus-item"><span>Content systems</span><strong>Built deeply</strong></div>
+                  <div class="focus-item"><span>Technical SEO</span><strong>Fixed cleanly</strong></div>
+                </div>
+              </div>
+
+              <div class="visual-card ring-panel">
+                <h3>Tools I work with</h3>
+                <p>AI tools and SEO platforms visualised in a moving ring so the hero feels more alive without breaking the layout.</p>
+                <div class="tool-ring-wrap">
+                  <div class="tool-ring">
+                    <div class="ring-center">SEO + AI<br>Stack</div>
+                    <div class="orbit">
+                      <div class="tool-chip" style="--angle: 0deg;">ChatGPT</div>
+                      <div class="tool-chip" style="--angle: 60deg;">Ahrefs</div>
+                      <div class="tool-chip" style="--angle: 120deg;">Claude</div>
+                      <div class="tool-chip" style="--angle: 180deg;">GSC</div>
+                      <div class="tool-chip" style="--angle: 240deg;">Surfer</div>
+                      <div class="tool-chip" style="--angle: 300deg;">GA4</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
