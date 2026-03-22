@@ -11,37 +11,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f7f8fc;
+      --bg: #f4f7fb;
       --bg-soft: #ffffff;
-      --panel: rgba(255, 255, 255, 0.78);
-      --panel-strong: rgba(255, 255, 255, 0.94);
-      --text: #101321;
-      --muted: #677089;
-      --line: rgba(16, 19, 33, 0.08);
-      --shadow: 0 20px 60px rgba(13, 18, 35, 0.08);
-      --shadow-soft: 0 12px 30px rgba(13, 18, 35, 0.06);
-      --accent: #5b7cff;
-      --accent-2: #7d5cff;
-      --accent-soft: rgba(91, 124, 255, 0.12);
-      --radius-xl: 32px;
-      --radius-lg: 24px;
-      --radius-md: 18px;
-      --max: 1220px;
+      --panel: rgba(255, 255, 255, 0.72);
+      --panel-strong: rgba(255, 255, 255, 0.92);
+      --text: #0e1525;
+      --muted: #5f6980;
+      --line: rgba(18, 26, 46, 0.08);
+      --shadow: 0 24px 80px rgba(15, 22, 39, 0.08);
+      --shadow-soft: 0 12px 32px rgba(15, 22, 39, 0.06);
+      --accent: #356dff;
+      --accent-2: #8a63ff;
+      --accent-3: #14c7c9;
+      --accent-soft: rgba(53, 109, 255, 0.1);
+      --max: 1240px;
     }
 
     body.dark {
-      --bg: #0d1018;
-      --bg-soft: #131826;
-      --panel: rgba(19, 24, 38, 0.72);
-      --panel-strong: rgba(19, 24, 38, 0.92);
-      --text: #f4f7ff;
-      --muted: #97a3bd;
+      --bg: #07111f;
+      --bg-soft: #0b1628;
+      --panel: rgba(12, 21, 39, 0.74);
+      --panel-strong: rgba(13, 23, 42, 0.92);
+      --text: #f2f7ff;
+      --muted: #97a8c4;
       --line: rgba(255, 255, 255, 0.08);
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
-      --shadow-soft: 0 14px 36px rgba(0, 0, 0, 0.24);
-      --accent: #86a0ff;
-      --accent-2: #ac8dff;
-      --accent-soft: rgba(134, 160, 255, 0.16);
+      --shadow: 0 30px 100px rgba(0, 0, 0, 0.34);
+      --shadow-soft: 0 16px 42px rgba(0, 0, 0, 0.24);
+      --accent: #7da0ff;
+      --accent-2: #b086ff;
+      --accent-3: #49d7da;
+      --accent-soft: rgba(125, 160, 255, 0.16);
     }
 
     * { box-sizing: border-box; }
@@ -50,8 +49,9 @@
       margin: 0;
       font-family: Inter, system-ui, sans-serif;
       background:
-        radial-gradient(circle at top left, rgba(125, 92, 255, 0.08), transparent 28%),
-        radial-gradient(circle at 88% 12%, rgba(91, 124, 255, 0.08), transparent 26%),
+        radial-gradient(circle at 0% 0%, rgba(53,109,255,0.09), transparent 24%),
+        radial-gradient(circle at 100% 8%, rgba(138,99,255,0.10), transparent 26%),
+        radial-gradient(circle at 82% 78%, rgba(20,199,201,0.08), transparent 20%),
         linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
       color: var(--text);
       transition: background 0.35s ease, color 0.35s ease;
@@ -64,19 +64,19 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 1px);
-      background-size: 52px 52px;
-      opacity: 0.35;
-      mask-image: radial-gradient(circle at center, black 42%, transparent 100%);
+        linear-gradient(rgba(0,0,0,0.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.018) 1px, transparent 1px);
+      background-size: 58px 58px;
+      opacity: 0.34;
+      mask-image: radial-gradient(circle at center, black 38%, transparent 100%);
       z-index: 0;
     }
 
     body.dark::before {
       background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      opacity: 0.25;
+        linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      opacity: 0.24;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -104,7 +104,7 @@
       border: 1px solid var(--line);
       border-radius: 999px;
       background: var(--panel);
-      backdrop-filter: blur(18px);
+      backdrop-filter: blur(20px);
       box-shadow: var(--shadow-soft);
     }
 
@@ -125,7 +125,7 @@
       letter-spacing: -0.03em;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
       color: white;
-      box-shadow: 0 10px 25px rgba(91,124,255,0.22);
+      box-shadow: 0 10px 25px rgba(53,109,255,0.24);
     }
 
     .brand-copy strong {
@@ -191,29 +191,43 @@
     }
 
     .hero {
-      padding: 34px 0 20px;
+      padding: 34px 0 28px;
     }
 
     .hero-shell {
-      padding: 26px;
-      border-radius: 36px;
+      position: relative;
+      padding: 28px;
+      border-radius: 38px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
-      backdrop-filter: blur(16px);
+      backdrop-filter: blur(18px);
       box-shadow: var(--shadow);
       overflow: hidden;
     }
 
+    .hero-shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 18% 24%, rgba(53,109,255,0.10), transparent 24%),
+        radial-gradient(circle at 84% 18%, rgba(138,99,255,0.12), transparent 20%),
+        radial-gradient(circle at 72% 78%, rgba(20,199,201,0.08), transparent 18%);
+      pointer-events: none;
+    }
+
     .hero-grid {
+      position: relative;
       display: grid;
-      grid-template-columns: 1.12fr 0.88fr;
-      gap: 24px;
+      grid-template-columns: 1.02fr 0.98fr;
+      gap: 28px;
       align-items: center;
-      min-height: 84vh;
+      min-height: 86vh;
     }
 
     .hero-copy {
-      padding: 18px 10px 18px 6px;
+      padding: 18px 8px 18px 4px;
+      max-width: 640px;
     }
 
     .eyebrow {
@@ -223,11 +237,17 @@
       width: fit-content;
       padding: 10px 14px;
       border-radius: 999px;
-      background: var(--accent-soft);
+      background: rgba(255,255,255,0.58);
+      border: 1px solid var(--line);
       color: var(--accent);
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
       margin-bottom: 22px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    body.dark .eyebrow {
+      background: rgba(255,255,255,0.04);
     }
 
     .eyebrow::before {
@@ -235,21 +255,23 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: currentColor;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      box-shadow: 0 0 0 5px var(--accent-soft);
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(3rem, 7vw, 6rem);
-      line-height: 0.94;
-      letter-spacing: -0.06em;
+      font-size: clamp(3.2rem, 7vw, 6.6rem);
+      line-height: 0.9;
+      letter-spacing: -0.07em;
+      max-width: 760px;
     }
 
     .hero-copy p {
-      max-width: 720px;
+      max-width: 620px;
       color: var(--muted);
-      line-height: 1.8;
-      font-size: 1.06rem;
+      line-height: 1.82;
+      font-size: 1.05rem;
       margin: 22px 0 0;
     }
 
@@ -257,364 +279,270 @@
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      margin-top: 30px;
     }
 
-    .hero-strip {
+    .hero-metrics {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
       margin-top: 34px;
     }
 
-    .mini-card {
+    .metric {
       padding: 18px;
       border-radius: 22px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.52);
+      background: rgba(255,255,255,0.56);
       box-shadow: var(--shadow-soft);
-      transform: translateY(var(--shift, 0px)) scale(var(--card-scale, 1));
-      transition: transform 0.35s ease, background 0.35s ease;
     }
 
-    body.dark .mini-card {
+    body.dark .metric {
       background: rgba(255,255,255,0.03);
     }
 
-    .mini-card strong {
+    .metric strong {
       display: block;
-      font-size: 1rem;
+      font-size: 0.98rem;
       margin-bottom: 8px;
     }
 
-    .mini-card span {
-      color: var(--muted);
-      font-size: 0.92rem;
-      line-height: 1.6;
+    .metric span {
       display: block;
+      color: var(--muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
     }
 
     .hero-visual {
       position: relative;
-      height: 100%;
+      min-height: 700px;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 10px;
+      padding: 8px;
     }
 
-    .visual-stack {
+    .visual-orbit {
       position: relative;
       width: 100%;
-      max-width: 520px;
-      aspect-ratio: 0.94 / 1;
-      perspective: 1400px;
+      max-width: 620px;
+      aspect-ratio: 1 / 1.02;
     }
 
-    .dashboard-card {
+    .glow-disc,
+    .glow-disc-2 {
       position: absolute;
-      inset: auto 0 0 0;
-      margin: auto;
-      width: 100%;
+      border-radius: 50%;
+      filter: blur(18px);
+      opacity: 0.7;
+    }
+
+    .glow-disc {
+      width: 250px;
+      height: 250px;
+      right: 8%;
+      top: 8%;
+      background: radial-gradient(circle, rgba(138,99,255,0.24), transparent 70%);
+    }
+
+    .glow-disc-2 {
+      width: 230px;
+      height: 230px;
+      left: 2%;
+      bottom: 8%;
+      background: radial-gradient(circle, rgba(20,199,201,0.20), transparent 70%);
+    }
+
+    .hero-card {
+      position: absolute;
       border-radius: 30px;
       border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.72));
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+      backdrop-filter: blur(20px);
       box-shadow: var(--shadow);
-      backdrop-filter: blur(18px);
       overflow: hidden;
       transition: transform 0.35s ease, opacity 0.35s ease, background 0.35s ease;
     }
 
-    body.dark .dashboard-card {
-      background: linear-gradient(180deg, rgba(24,29,43,0.95), rgba(19,24,38,0.84));
+    body.dark .hero-card {
+      background: linear-gradient(180deg, rgba(14,24,43,0.95), rgba(12,21,39,0.82));
     }
 
-    .card-a {
-      height: 72%;
-      bottom: 0;
-      transform: translateY(calc(var(--stack-shift, 0px) * 0.12)) scale(calc(1 - var(--stack-scale, 0) * 0.03));
+    .hero-main-card {
+      inset: auto 2% 0 8%;
+      height: 64%;
       z-index: 3;
+      transform: translateY(calc(var(--stack-shift, 0px) * 0.12)) rotate(-2deg);
     }
 
-    .card-b {
-      height: 66%;
-      width: 92%;
-      bottom: 8%;
-      transform: translateY(calc(var(--stack-shift, 0px) * 0.2)) scale(calc(0.94 - var(--stack-scale, 0) * 0.04));
-      z-index: 2;
-      opacity: 0.85;
+    .hero-side-card {
+      top: 7%;
+      right: 0;
+      width: 48%;
+      height: 36%;
+      z-index: 4;
+      transform: translateY(calc(var(--stack-shift, 0px) * -0.16)) rotate(8deg);
     }
 
-    .card-c {
-      height: 58%;
-      width: 84%;
-      bottom: 16%;
-      transform: translateY(calc(var(--stack-shift, 0px) * 0.28)) scale(calc(0.89 - var(--stack-scale, 0) * 0.05));
+    .hero-back-card {
+      left: 0;
+      top: 15%;
+      width: 46%;
+      height: 30%;
       z-index: 1;
-      opacity: 0.72;
+      opacity: 0.82;
+      transform: translateY(calc(var(--stack-shift, 0px) * 0.18)) rotate(-10deg);
     }
 
-    .dash-top {
+    .hero-bottom-card {
+      right: 8%;
+      bottom: 10%;
+      width: 42%;
+      height: 24%;
+      z-index: 2;
+      opacity: 0.92;
+      transform: translateY(calc(var(--stack-shift, 0px) * -0.12)) rotate(5deg);
+    }
+
+    .card-top {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 18px 20px;
+      padding: 16px 18px;
       border-bottom: 1px solid var(--line);
     }
 
-    .dots {
-      display: flex;
-      gap: 8px;
-    }
-
+    .dots { display: flex; gap: 8px; }
     .dots span {
-      width: 9px;
-      height: 9px;
+      width: 8px;
+      height: 8px;
       border-radius: 50%;
-      background: rgba(103,112,137,0.4);
+      background: rgba(95,105,128,0.34);
     }
 
-    .dash-title {
-      font-size: 0.86rem;
+    .card-label {
       color: var(--muted);
+      font-size: 0.82rem;
       font-weight: 600;
     }
 
-    .dash-body {
-      padding: 20px;
+    .card-body {
+      padding: 18px;
       display: grid;
       gap: 14px;
     }
 
-    .panel {
-      border-radius: 22px;
+    .data-panel,
+    .data-chip,
+    .line-item {
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.55);
-      padding: 16px;
+      background: rgba(255,255,255,0.52);
+      box-shadow: var(--shadow-soft);
     }
 
-    body.dark .panel {
+    body.dark .data-panel,
+    body.dark .data-chip,
+    body.dark .line-item {
       background: rgba(255,255,255,0.03);
     }
 
-    .panel strong {
+    .data-panel {
+      padding: 16px;
+      border-radius: 22px;
+    }
+
+    .data-panel strong {
       display: block;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       font-size: 0.95rem;
     }
 
-    .bars {
+    .chart-grid {
       display: grid;
-      gap: 10px;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 8px;
+      align-items: end;
+      height: 110px;
     }
 
-    .bar {
-      height: 10px;
-      border-radius: 999px;
-      background: rgba(103,112,137,0.12);
-      overflow: hidden;
-    }
-
-    .bar span {
+    .chart-grid span {
       display: block;
-      height: 100%;
-      border-radius: inherit;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      border-radius: 999px 999px 8px 8px;
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      opacity: 0.95;
     }
 
-    .chips {
+    .ring-shell {
+      display: grid;
+      place-items: center;
+      padding: 10px;
+    }
+
+    .ring-meter {
+      width: 132px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: conic-gradient(var(--accent) 0 42%, var(--accent-2) 42% 77%, var(--accent-3) 77% 100%);
+      display: grid;
+      place-items: center;
+      box-shadow: inset 0 0 0 14px rgba(255,255,255,0.64);
+    }
+
+    body.dark .ring-meter {
+      box-shadow: inset 0 0 0 14px rgba(8,14,26,0.86);
+    }
+
+    .ring-meter::after {
+      content: "96";
+      display: grid;
+      place-items: center;
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      background: var(--panel-strong);
+      color: var(--text);
+      font-weight: 800;
+      font-size: 1.55rem;
+    }
+
+    .chip-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
     }
 
-    .chips span {
+    .data-chip {
       padding: 10px 12px;
       border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
+      color: var(--text);
       font-size: 0.84rem;
       font-weight: 600;
     }
 
-    .section {
-      padding: 80px 0;
+    .line-stack {
+      display: grid;
+      gap: 10px;
     }
 
-    .section-head {
-      max-width: 760px;
-      margin-bottom: 28px;
-    }
-
-    .section-head h2 {
-      margin: 0;
-      font-size: clamp(2rem, 4vw, 3.1rem);
-      letter-spacing: -0.05em;
-    }
-
-    .section-head p {
-      color: var(--muted);
-      line-height: 1.85;
-      margin: 16px 0 0;
-      font-size: 1rem;
-    }
-
-    .cards-collect {
-      position: relative;
-      min-height: 150vh;
-    }
-
-    .cards-sticky {
-      position: sticky;
-      top: 100px;
-      height: calc(100vh - 120px);
+    .line-item {
       display: flex;
       align-items: center;
-      justify-content: center;
-    }
-
-    .collect-stage {
-      position: relative;
-      width: 100%;
-      max-width: 1100px;
-      height: 700px;
-    }
-
-    .collect-card {
-      position: absolute;
-      width: min(360px, 92vw);
-      padding: 28px;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background: var(--panel);
-      backdrop-filter: blur(16px);
-      box-shadow: var(--shadow);
-      transition: transform 0.22s linear, opacity 0.22s linear;
-      will-change: transform, opacity;
-    }
-
-    .collect-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.35rem;
-      letter-spacing: -0.04em;
-    }
-
-    .collect-card p {
-      margin: 0;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: 16px;
       color: var(--muted);
-      line-height: 1.78;
+      font-size: 0.9rem;
     }
 
-    .collect-card .num {
-      display: inline-flex;
-      margin-bottom: 16px;
-      width: 42px;
-      height: 42px;
-      border-radius: 14px;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      font-weight: 700;
-      box-shadow: 0 10px 22px rgba(91,124,255,0.2);
-    }
-
-    .c1 { top: 2%; left: 2%; }
-    .c2 { top: 8%; right: 2%; }
-    .c3 { bottom: 18%; left: 8%; }
-    .c4 { bottom: 4%; right: 8%; }
-
-    .zoom-section {
-      min-height: 180vh;
-      position: relative;
-    }
-
-    .zoom-sticky {
-      position: sticky;
-      top: 100px;
-      height: calc(100vh - 120px);
-      display: grid;
-      place-items: center;
-    }
-
-    .zoom-shell {
-      width: min(1080px, 100%);
-      padding: 26px;
-      border-radius: 34px;
-      background: var(--panel);
-      border: 1px solid var(--line);
-      box-shadow: var(--shadow);
-      transform: scale(var(--zoom, 1));
-      transition: transform 0.18s linear;
-      will-change: transform;
-    }
-
-    .zoom-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 18px;
-    }
-
-    .feature {
-      padding: 28px;
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,0.48);
-    }
-
-    body.dark .feature { background: rgba(255,255,255,0.03); }
-
-    .feature h3 {
-      margin: 0 0 14px;
-      font-size: 1.4rem;
-      letter-spacing: -0.04em;
-    }
-
-    .feature p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.85;
-    }
-
-    .feature-list {
-      display: grid;
-      gap: 14px;
-      margin-top: 22px;
-    }
-
-    .feature-list div {
-      padding: 16px 18px;
-      border-radius: 18px;
-      background: var(--panel-strong);
-      border: 1px solid var(--line);
+    .line-item b {
       color: var(--text);
-      box-shadow: var(--shadow-soft);
+      font-weight: 700;
     }
 
-    .simple-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .simple-card {
-      padding: 26px;
-      border-radius: 28px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .simple-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.2rem;
-      letter-spacing: -0.04em;
-    }
-
-    .simple-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.78;
+    .section {
+      padding: 64px 0 84px;
     }
 
     .contact-box {
@@ -661,23 +589,14 @@
 
     @media (max-width: 1060px) {
       .hero-grid,
-      .zoom-grid,
-      .simple-grid,
       .contact-box {
         grid-template-columns: 1fr;
       }
 
       .hero-shell,
-      .zoom-shell,
       .contact-box { padding: 22px; }
-      .cards-sticky,
-      .zoom-sticky { top: 84px; height: calc(100vh - 100px); }
-      .collect-stage { height: 760px; }
-      .c1, .c2, .c3, .c4 { left: 50%; right: auto; transform: translateX(-50%); }
-      .c1 { top: 0; }
-      .c2 { top: 180px; }
-      .c3 { top: 360px; bottom: auto; }
-      .c4 { top: 540px; bottom: auto; }
+      .hero-visual { min-height: 560px; }
+      .hero-metrics { grid-template-columns: 1fr; }
     }
 
     @media (max-width: 760px) {
@@ -687,57 +606,15 @@
         flex-direction: column;
       }
 
-      .nav-links {
-        width: 100%;
-      }
-
-      .hero-grid {
-        min-height: auto;
-      }
-
-      .hero-strip {
-        grid-template-columns: 1fr;
-      }
-
-      .collect-card,
-      .simple-card,
-      .feature,
-      .mini-card {
-        border-radius: 24px;
-      }
-
-      .cards-sticky,
-      .zoom-sticky {
-        position: relative;
-        top: auto;
-        height: auto;
-      }
-
-      .cards-collect,
-      .zoom-section {
-        min-height: auto;
-      }
-
-      .collect-stage {
-        height: auto;
-        display: grid;
-        gap: 16px;
-      }
-
-      .collect-card {
-        position: relative;
-        width: 100%;
-        top: auto !important;
-        left: auto !important;
-        right: auto !important;
-        bottom: auto !important;
-        transform: none !important;
-        opacity: 1 !important;
-      }
-
-      .zoom-shell {
-        transform: none !important;
-      }
+      .nav-links { width: 100%; }
+      .hero-grid { min-height: auto; }
+      .hero-shell { padding: 18px; border-radius: 28px; }
+      .hero-visual { min-height: 430px; }
+      .hero-main-card { inset: auto 0 0 4%; width: 96%; }
+      .hero-side-card { width: 54%; height: 34%; }
+      .hero-back-card { width: 50%; }
+      .hero-bottom-card { width: 48%; }
+      .contact-box { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -752,9 +629,7 @@
         </div>
       </a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#systems">Systems</a>
-        <a href="#expertise">Expertise</a>
+        <a href="#top">Home</a>
         <a href="#contact">Contact</a>
         <button class="theme-toggle" id="themeToggle" type="button">Dark mode</button>
       </div>
@@ -765,88 +640,101 @@
     <div class="hero-shell reveal show">
       <div class="hero-grid">
         <div class="hero-copy">
-          <div class="eyebrow">Clean modern AI-era portfolio</div>
-          <h1>Modern search visibility, designed with clarity.</h1>
+          <div class="eyebrow">AEO, SEO and GEO specialist</div>
+          <h1>Building stronger visibility for search, answer engines and the AI web.</h1>
           <p>
-            I am Aditya, an AEO, SEO and GEO specialist building a sharp digital identity for the next generation of search. This page is designed to feel elegant, premium and future-ready while still staying clean enough to share confidently with recruiters, founders and collaborators.
+            I am Aditya, focused on how content, structure and intent work together to improve discoverability across modern search systems. My interest is in making information clearer, more useful and easier to retrieve across traditional search results, answer-driven experiences and emerging generative interfaces.
           </p>
           <div class="hero-actions">
             <a href="#contact" class="btn primary">Let’s Connect</a>
-            <a href="#systems" class="btn">See My Approach</a>
+            <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" class="btn">LinkedIn</a>
           </div>
-          <div class="hero-strip">
-            <div class="mini-card" id="mini1">
-              <strong>AEO Thinking</strong>
-              <span>Built around direct answers, visibility layers and semantic clarity.</span>
+          <div class="hero-metrics">
+            <div class="metric">
+              <strong>AEO</strong>
+              <span>Focused on creating content structures that answer clearly and are easier for modern answer surfaces to interpret.</span>
             </div>
-            <div class="mini-card" id="mini2">
-              <strong>SEO Depth</strong>
-              <span>Focused on structure, search intent and premium information design.</span>
+            <div class="metric">
+              <strong>SEO</strong>
+              <span>Grounded in search intent, page structure, content clarity and stronger topical organization.</span>
             </div>
-            <div class="mini-card" id="mini3">
-              <strong>GEO Readiness</strong>
-              <span>Prepared for AI search experiences, retrieval and answer engines.</span>
+            <div class="metric">
+              <strong>GEO</strong>
+              <span>Exploring how discoverability changes when AI systems retrieve, summarize and present information.</span>
             </div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="visual-stack" id="visualStack">
-            <div class="dashboard-card card-c">
-              <div class="dash-top">
+          <div class="visual-orbit" id="visualStack">
+            <div class="glow-disc"></div>
+            <div class="glow-disc-2"></div>
+
+            <div class="hero-card hero-back-card">
+              <div class="card-top">
                 <div class="dots"><span></span><span></span><span></span></div>
-                <div class="dash-title">Authority Layer</div>
+                <div class="card-label">Entity Layer</div>
               </div>
-              <div class="dash-body">
-                <div class="panel">
-                  <strong>Entity consistency</strong>
-                  <div class="bars">
-                    <div class="bar"><span style="width:82%"></span></div>
-                    <div class="bar"><span style="width:68%"></span></div>
-                    <div class="bar"><span style="width:91%"></span></div>
-                  </div>
+              <div class="card-body ring-shell">
+                <div class="ring-meter"></div>
+              </div>
+            </div>
+
+            <div class="hero-card hero-side-card">
+              <div class="card-top">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div class="card-label">Signal Stack</div>
+              </div>
+              <div class="card-body">
+                <div class="chip-grid">
+                  <div class="data-chip">Semantic clarity</div>
+                  <div class="data-chip">Intent structure</div>
+                  <div class="data-chip">Entity authority</div>
+                  <div class="data-chip">AI retrieval</div>
                 </div>
               </div>
             </div>
 
-            <div class="dashboard-card card-b">
-              <div class="dash-top">
+            <div class="hero-card hero-bottom-card">
+              <div class="card-top">
                 <div class="dots"><span></span><span></span><span></span></div>
-                <div class="dash-title">Answer Layer</div>
+                <div class="card-label">Question Paths</div>
               </div>
-              <div class="dash-body">
-                <div class="panel">
-                  <strong>Question architecture</strong>
-                  <div class="chips">
-                    <span>Direct answers</span>
-                    <span>Structured format</span>
-                    <span>Intent match</span>
-                  </div>
+              <div class="card-body">
+                <div class="line-stack">
+                  <div class="line-item"><span>Questions</span><b>Clear intent</b></div>
+                  <div class="line-item"><span>Structure</span><b>Useful pages</b></div>
+                  <div class="line-item"><span>Discovery</span><b>Better retrieval</b></div>
                 </div>
               </div>
             </div>
 
-            <div class="dashboard-card card-a">
-              <div class="dash-top">
+            <div class="hero-card hero-main-card">
+              <div class="card-top">
                 <div class="dots"><span></span><span></span><span></span></div>
-                <div class="dash-title">Visibility Dashboard</div>
+                <div class="card-label">Visibility Intelligence</div>
               </div>
-              <div class="dash-body">
-                <div class="panel">
-                  <strong>Search systems</strong>
-                  <div class="bars">
-                    <div class="bar"><span style="width:94%"></span></div>
-                    <div class="bar"><span style="width:74%"></span></div>
-                    <div class="bar"><span style="width:86%"></span></div>
+              <div class="card-body">
+                <div class="data-panel">
+                  <strong>Visibility signals</strong>
+                  <div class="chart-grid">
+                    <span style="height:36%"></span>
+                    <span style="height:50%"></span>
+                    <span style="height:42%"></span>
+                    <span style="height:66%"></span>
+                    <span style="height:58%"></span>
+                    <span style="height:84%"></span>
+                    <span style="height:76%"></span>
+                    <span style="height:94%"></span>
                   </div>
                 </div>
-                <div class="panel">
-                  <strong>Focus areas</strong>
-                  <div class="chips">
-                    <span>AEO</span>
-                    <span>SEO</span>
-                    <span>GEO</span>
-                    <span>AI-first UX</span>
+                <div class="data-panel">
+                  <strong>Core layers</strong>
+                  <div class="chip-grid">
+                    <div class="data-chip">Content structure</div>
+                    <div class="data-chip">Search intent</div>
+                    <div class="data-chip">Entity clarity</div>
+                    <div class="data-chip">AI discoverability</div>
                   </div>
                 </div>
               </div>
@@ -857,106 +745,12 @@
     </div>
   </header>
 
-  <section class="section wrap reveal" id="about">
-    <div class="section-head">
-      <h2>A cleaner way to present expertise</h2>
-      <p>
-        I do not want this website to feel loud or fake. I want it to feel precise, elevated and modern. So instead of pretending to be a big agency, this page presents me as an individual specialist with strong thinking around discoverability, search structure and AI-era visibility.
-      </p>
-    </div>
-    <div class="simple-grid">
-      <div class="simple-card">
-        <h3>Elegant presentation</h3>
-        <p>Minimal but premium visual language with soft depth, smooth spacing and a polished product-style interface.</p>
-      </div>
-      <div class="simple-card">
-        <h3>Future-facing positioning</h3>
-        <p>Framed for founders, recruiters and collaborators who want someone who understands where search is heading.</p>
-      </div>
-      <div class="simple-card">
-        <h3>Honest personal branding</h3>
-        <p>Built to look strong without making fake client claims or overstating experience.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap cards-collect reveal" id="systems">
-    <div class="section-head">
-      <h2>Cards that collect into one system</h2>
-      <p>
-        This section is intentionally designed to feel like multiple capabilities smoothly pulling together into one focused identity as you scroll.
-      </p>
-    </div>
-    <div class="cards-sticky">
-      <div class="collect-stage" id="collectStage">
-        <article class="collect-card c1" data-x="0" data-y="0">
-          <div class="num">01</div>
-          <h3>Intent mapping</h3>
-          <p>I think from the query outward. What is the user asking, how is it phrased and how should a page respond clearly enough to earn trust.</p>
-        </article>
-        <article class="collect-card c2" data-x="0" data-y="0">
-          <div class="num">02</div>
-          <h3>Answer structure</h3>
-          <p>Pages should not only rank. They should answer. Clean hierarchy, concise explanation and machine-readable framing matter a lot now.</p>
-        </article>
-        <article class="collect-card c3" data-x="0" data-y="0">
-          <div class="num">03</div>
-          <h3>Entity clarity</h3>
-          <p>Authority grows when a person, brand and topic become more understandable across the web and across systems.</p>
-        </article>
-        <article class="collect-card c4" data-x="0" data-y="0">
-          <div class="num">04</div>
-          <h3>AI-era discoverability</h3>
-          <p>Modern visibility includes search results, AI overviews, answer engines and future interfaces where retrieval matters as much as ranking.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap zoom-section reveal" id="expertise">
-    <div class="section-head">
-      <h2>Zoom in, then zoom out</h2>
-      <p>
-        This fold is built to feel more cinematic. On scroll, the layout subtly zooms to create that premium product-site motion feeling while keeping the design light and refined.
-      </p>
-    </div>
-    <div class="zoom-sticky">
-      <div class="zoom-shell" id="zoomShell">
-        <div class="zoom-grid">
-          <div class="feature">
-            <h3>My approach to AEO, SEO and GEO</h3>
-            <p>
-              I think the strongest modern search specialists will be the ones who can connect classic SEO foundations with answer engine optimization and generative engine optimization. That means understanding structure, language, visibility signals and how AI systems retrieve and present information.
-            </p>
-            <div class="feature-list">
-              <div>Design pages that humans can scan fast and AI systems can interpret clearly.</div>
-              <div>Build topic depth instead of thin content made only for rankings.</div>
-              <div>Create a strong personal presence with trust, clarity and consistency.</div>
-            </div>
-          </div>
-          <div class="feature">
-            <h3>What makes this site feel premium</h3>
-            <p>
-              Soft glass layers, spacious typography, modern cards, light-dark switching and custom motion logic help this page feel clean, elegant and high-level rather than cluttered.
-            </p>
-            <div class="feature-list">
-              <div>Single-page static website</div>
-              <div>Light mode and dark mode</div>
-              <div>Smooth premium interaction</div>
-              <div>Shareable personal brand design</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="section wrap reveal" id="contact">
     <div class="contact-box">
       <div>
-        <h2>Let’s build a sharp digital identity</h2>
+        <h2>Open to meaningful opportunities</h2>
         <p>
-          If you want to connect, collaborate or simply start a conversation around AEO, SEO, GEO and AI-first discoverability, this page is ready to be your clean personal brand base. Replace the email and LinkedIn below with your real details before sharing.
+          I am building my personal presence around AEO, SEO and GEO with a focus on clear strategy, structured content and AI-era discoverability. If you are hiring, collaborating or just want to connect around modern organic growth, feel free to reach out.
         </p>
       </div>
       <div class="hero-actions">
@@ -973,6 +767,7 @@
   <script>
     const themeToggle = document.getElementById('themeToggle');
     const savedTheme = localStorage.getItem('theme');
+
     if (savedTheme === 'dark') {
       document.body.classList.add('dark');
       themeToggle.textContent = 'Light mode';
@@ -993,62 +788,13 @@
     }, { threshold: 0.15 });
     reveals.forEach((el) => revealObserver.observe(el));
 
-    const collectSection = document.querySelector('.cards-collect');
-    const collectCards = document.querySelectorAll('.collect-card');
     const visualStack = document.getElementById('visualStack');
-    const zoomSection = document.querySelector('.zoom-section');
-    const zoomShell = document.getElementById('zoomShell');
-    const mini1 = document.getElementById('mini1');
-    const mini2 = document.getElementById('mini2');
-    const mini3 = document.getElementById('mini3');
-
-    function clamp(num, min, max) {
-      return Math.min(Math.max(num, min), max);
-    }
 
     function updateScrollEffects() {
-      const vh = window.innerHeight;
-
-      if (collectSection && window.innerWidth > 760) {
-        const rect = collectSection.getBoundingClientRect();
-        const progress = clamp((vh - rect.top) / (rect.height - vh + 1), 0, 1);
-        const positions = [
-          [-220, -130],
-          [220, -90],
-          [-160, 130],
-          [170, 160]
-        ];
-
-        collectCards.forEach((card, index) => {
-          const [x, y] = positions[index];
-          const moveX = x * (1 - progress);
-          const moveY = y * (1 - progress);
-          const scale = 0.95 + progress * 0.05;
-          card.style.transform = `translate(${moveX}px, ${moveY}px) scale(${scale})`;
-          card.style.opacity = String(0.48 + progress * 0.52);
-        });
-      }
-
-      if (zoomSection && zoomShell && window.innerWidth > 760) {
-        const rect = zoomSection.getBoundingClientRect();
-        const progress = clamp((vh - rect.top) / (rect.height - vh + 1), 0, 1);
-        const zoom = 1.08 - (progress * 0.16);
-        zoomShell.style.setProperty('--zoom', zoom.toFixed(3));
-      }
-
       if (visualStack) {
         const top = window.scrollY || window.pageYOffset;
         const shift = Math.sin(top / 280) * 18;
-        const scale = (Math.cos(top / 380) + 1) / 2;
         visualStack.style.setProperty('--stack-shift', `${shift}px`);
-        visualStack.style.setProperty('--stack-scale', scale.toFixed(3));
-      }
-
-      if (mini1 && mini2 && mini3) {
-        const top = window.scrollY || window.pageYOffset;
-        mini1.style.setProperty('--shift', `${Math.sin(top / 220) * -6}px`);
-        mini2.style.setProperty('--shift', `${Math.sin(top / 240) * 6}px`);
-        mini3.style.setProperty('--shift', `${Math.cos(top / 260) * -6}px`);
       }
     }
 
