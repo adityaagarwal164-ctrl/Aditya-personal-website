@@ -1,9 +1,1039 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Aditya Website</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Agarwal | AEO, SEO & GEO Specialist</title>
+  <meta name="description" content="Personal website of Aditya Agarwal, an AEO, SEO and GEO specialist building search visibility systems for the AI-first web." />
+  <meta name="theme-color" content="#050816" />
+  <meta property="og:title" content="Aditya Agarwal | AEO, SEO & GEO Specialist" />
+  <meta property="og:description" content="A futuristic personal website for an AI-era visibility specialist focused on AEO, SEO and GEO." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@500;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #040816;
+      --bg-2: #071126;
+      --panel: rgba(10, 19, 42, 0.65);
+      --line: rgba(155, 198, 255, 0.18);
+      --text: #eef5ff;
+      --muted: #9eaac7;
+      --cyan: #6fe7ff;
+      --blue: #6b8cff;
+      --violet: #b470ff;
+      --glow: 0 0 50px rgba(111, 231, 255, 0.18), 0 0 80px rgba(107, 140, 255, 0.12);
+      --radius: 26px;
+      --max: 1220px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(111, 231, 255, 0.14), transparent 0 26%),
+        radial-gradient(circle at 85% 18%, rgba(180, 112, 255, 0.16), transparent 0 24%),
+        radial-gradient(circle at 80% 72%, rgba(107, 140, 255, 0.18), transparent 0 22%),
+        linear-gradient(160deg, #02050f 0%, #051020 40%, #070d1f 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+      background-size: 80px 80px;
+      mask-image: radial-gradient(circle at center, black 45%, transparent 100%);
+      opacity: 0.24;
+    }
+
+    body::after {
+      background:
+        radial-gradient(circle at center, rgba(255,255,255,0.04), transparent 45%),
+        radial-gradient(circle at center, rgba(111,231,255,0.05), transparent 38%);
+      animation: pulseBg 7s ease-in-out infinite alternate;
+      opacity: 0.7;
+    }
+
+    @keyframes pulseBg {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.08); }
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; display: block; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav {
+      position: sticky;
+      top: 14px;
+      z-index: 20;
+      padding-top: 14px;
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 20px;
+      border: 1px solid var(--line);
+      background: rgba(5, 10, 25, 0.58);
+      backdrop-filter: blur(16px);
+      border-radius: 22px;
+      box-shadow: var(--glow);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, rgba(111,231,255,0.25), rgba(180,112,255,0.25));
+      border: 1px solid rgba(255,255,255,0.14);
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 32px rgba(111, 231, 255, 0.18);
+      font-family: Orbitron, sans-serif;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .brand-copy strong {
+      display: block;
+      font-size: 0.97rem;
+    }
+
+    .brand-copy span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.83rem;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 0.94rem;
+      transition: 0.25s ease;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0.04));
+      color: var(--text);
+      font-weight: 600;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.35);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      border-color: rgba(111,231,255,0.5);
+      box-shadow: 0 10px 50px rgba(111,231,255,0.15);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(111,231,255,0.28), rgba(107,140,255,0.24), rgba(180,112,255,0.22));
+    }
+
+    .hero {
+      padding: 72px 0 32px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.18fr 0.82fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .glass {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(12, 21, 46, 0.72), rgba(7, 13, 31, 0.72));
+      backdrop-filter: blur(16px);
+      border-radius: var(--radius);
+      box-shadow: var(--glow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .glass::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,0.06) 45%, transparent 60%);
+      transform: translateX(-100%);
+      animation: sheen 8s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes sheen {
+      to { transform: translateX(100%); }
+    }
+
+    .hero-copy {
+      padding: 34px;
+      min-height: 640px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      width: fit-content;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.04);
+      color: #cfe7ff;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--cyan), var(--violet));
+      box-shadow: 0 0 14px rgba(111,231,255,0.8);
+    }
+
+    h1 {
+      margin: 0;
+      font-family: Orbitron, Inter, sans-serif;
+      font-size: clamp(2.9rem, 7vw, 6.2rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #8cecff 32%, #b5c5ff 64%, #dfb0ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 1.08rem;
+      line-height: 1.75;
+      color: var(--muted);
+      max-width: 690px;
+      margin: 24px 0 0;
+    }
+
+    .hero-sub strong { color: var(--text); font-weight: 700; }
+
+    .hero-actions,
+    .quick-stats,
+    .chip-row,
+    .signal-grid,
+    .proof-grid,
+    .contact-cards,
+    .footer-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-actions { margin-top: 30px; }
+
+    .chip-row { margin-top: 26px; }
+
+    .chip {
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #c8d9ff;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+      font-size: 0.92rem;
+    }
+
+    .quick-stats {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .stat {
+      padding: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.04);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.8rem;
+      line-height: 1;
+      margin-bottom: 8px;
+      font-family: Orbitron, sans-serif;
+      background: linear-gradient(135deg, #fff, #8cecff, #dfb0ff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+      display: block;
+    }
+
+    .hero-visual {
+      padding: 26px;
+      min-height: 640px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .orbital {
+      position: relative;
+      width: min(100%, 510px);
+      aspect-ratio: 1 / 1;
+      display: grid;
+      place-items: center;
+      isolation: isolate;
+    }
+
+    .orbital::before,
+    .orbital::after {
+      content: "";
+      position: absolute;
+      inset: 8%;
+      border-radius: 50%;
+      border: 1px solid rgba(145, 185, 255, 0.15);
+      box-shadow: inset 0 0 40px rgba(111,231,255,0.04), 0 0 40px rgba(111,231,255,0.04);
+    }
+
+    .orbital::after {
+      inset: 18%;
+      animation: spin 24s linear infinite reverse;
+      border-style: dashed;
+    }
+
+    .ring,
+    .ring-2,
+    .ring-3 {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .ring { inset: 2%; animation: spin 20s linear infinite; }
+    .ring-2 { inset: 12%; animation: spin 14s linear infinite reverse; }
+    .ring-3 { inset: 26%; animation: spin 10s linear infinite; }
+
+    .ring .dot,
+    .ring-2 .dot,
+    .ring-3 .dot {
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fff, var(--cyan));
+      top: -8px;
+      left: calc(50% - 8px);
+      box-shadow: 0 0 22px rgba(111,231,255,0.7);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .core {
+      position: relative;
+      width: 58%;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background:
+        radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(111,231,255,0.35) 18%, rgba(107,140,255,0.22) 40%, rgba(3,10,28,0.96) 70%),
+        linear-gradient(145deg, rgba(111,231,255,0.2), rgba(180,112,255,0.14));
+      border: 1px solid rgba(255,255,255,0.16);
+      box-shadow: 0 0 60px rgba(111,231,255,0.24), inset 0 0 50px rgba(255,255,255,0.05);
+      overflow: hidden;
+    }
+
+    .core::before {
+      content: "";
+      position: absolute;
+      inset: 14%;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: inset 0 0 30px rgba(255,255,255,0.08);
+    }
+
+    .core-copy {
+      text-align: center;
+      padding: 18px;
+    }
+
+    .core-copy small {
+      display: block;
+      color: #b0caf7;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-bottom: 8px;
+      font-size: 0.72rem;
+    }
+
+    .core-copy strong {
+      display: block;
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(1.8rem, 3vw, 2.9rem);
+      line-height: 1;
+    }
+
+    .core-copy span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .node {
+      position: absolute;
+      width: 130px;
+      padding: 14px;
+      border-radius: 20px;
+      background: rgba(4, 11, 30, 0.74);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+      backdrop-filter: blur(12px);
+    }
+
+    .node strong {
+      display: block;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: #cde8ff;
+      margin-bottom: 6px;
+      text-transform: uppercase;
+    }
+
+    .node span {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.5;
+      display: block;
+    }
+
+    .node.n1 { top: 6%; right: 1%; }
+    .node.n2 { bottom: 10%; right: -1%; }
+    .node.n3 { bottom: 13%; left: -1%; }
+    .node.n4 { top: 14%; left: -2%; }
+
+    section {
+      padding: 22px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 22px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-family: Orbitron, sans-serif;
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      letter-spacing: -0.03em;
+    }
+
+    .section-head p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 720px;
+      line-height: 1.75;
+    }
+
+    .grid-3,
+    .grid-2 {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+    .card {
+      padding: 24px;
+      min-height: 100%;
+    }
+
+    .card .tag {
+      display: inline-flex;
+      margin-bottom: 16px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.04);
+      color: #cfe3ff;
+      border: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .card h3 {
+      margin: 0 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.75;
+      font-size: 0.97rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      gap: 20px;
+      align-items: start;
+      padding: 24px;
+    }
+
+    .time-badge {
+      padding: 12px 14px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      font-family: Orbitron, sans-serif;
+      color: #dff4ff;
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    .timeline-item h3 { margin: 0 0 10px; }
+    .timeline-item ul {
+      margin: 12px 0 0;
+      padding-left: 18px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .signal {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .signal strong {
+      display: block;
+      font-family: Orbitron, sans-serif;
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+      color: #eaf7ff;
+    }
+
+    .signal span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.93rem;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 18px;
+    }
+
+    .quote {
+      padding: 30px;
+    }
+
+    .quote blockquote {
+      margin: 0;
+      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      line-height: 1.6;
+      color: #ecf5ff;
+    }
+
+    .quote p {
+      margin: 18px 0 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .stack-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .stack-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .stack-item strong { font-size: 0.98rem; }
+    .stack-item span { color: var(--muted); font-size: 0.92rem; }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .contact-main {
+      padding: 28px;
+      min-height: 100%;
+    }
+
+    .contact-main p {
+      color: var(--muted);
+      line-height: 1.8;
+      max-width: 620px;
+    }
+
+    .contact-cards {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .contact-card {
+      padding: 18px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+    }
+
+    .contact-card small {
+      display: block;
+      color: #b6caf2;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+      font-size: 0.76rem;
+    }
+
+    .contact-card strong {
+      display: block;
+      font-size: 1rem;
+      word-break: break-word;
+    }
+
+    .footer {
+      padding: 24px 0 46px;
+    }
+
+    .footer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding-top: 12px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .small-muted { color: var(--muted); }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.08s; }
+    .delay-2 { animation-delay: 0.16s; }
+    .delay-3 { animation-delay: 0.24s; }
+    .delay-4 { animation-delay: 0.32s; }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 1120px) {
+      .hero-grid,
+      .proof-grid,
+      .contact-wrap,
+      .grid-3,
+      .grid-2,
+      .signal-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy,
+      .hero-visual { min-height: auto; }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .quick-stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 780px) {
+      .nav-inner,
+      .section-head,
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links,
+      .hero-actions,
+      .contact-cards {
+        width: 100%;
+      }
+
+      .nav-links { justify-content: flex-start; }
+
+      .hero {
+        padding-top: 34px;
+      }
+
+      .hero-copy,
+      .hero-visual,
+      .card,
+      .contact-main,
+      .quote,
+      .timeline-item {
+        padding: 22px;
+      }
+
+      .orbital {
+        width: 100%;
+        max-width: 420px;
+      }
+
+      .node {
+        position: static;
+        width: 100%;
+        margin-top: 12px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Setup done 🚀</h1>
+  <div class="wrap nav">
+    <div class="nav-inner">
+      <a href="#top" class="brand">
+        <div class="brand-mark">AA</div>
+        <div class="brand-copy">
+          <strong>Aditya Agarwal</strong>
+          <span>AEO • SEO • GEO Specialist</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="#expertise">Expertise</a>
+        <a href="#systems">Systems</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact" class="btn">Let’s Connect</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero wrap" id="top">
+    <div class="hero-grid">
+      <div class="glass hero-copy fade-up">
+        <div>
+          <div class="eyebrow">AI Search Visibility Architect</div>
+          <h1>
+            I build <span class="gradient-text">future-ready visibility</span><br>
+            for the next era of search.
+          </h1>
+          <p class="hero-sub">
+            I am <strong>Aditya Agarwal</strong>, an <strong>AEO, SEO and GEO specialist</strong> focused on helping brands become discoverable across classic search, answer engines and AI-driven interfaces. My work sits at the intersection of <strong>content intelligence, structured visibility, entity authority and machine-readable trust</strong>.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn primary">Build Your Search Presence</a>
+            <a href="#systems" class="btn">See My Framework</a>
+          </div>
+          <div class="chip-row">
+            <div class="chip">Answer Engine Optimization</div>
+            <div class="chip">Search Entity Positioning</div>
+            <div class="chip">Generative Engine Optimization</div>
+            <div class="chip">AI-First Content Systems</div>
+          </div>
+        </div>
+
+        <div class="quick-stats">
+          <div class="stat">
+            <strong>AEO</strong>
+            <span>Built for featured answers, AI summaries, knowledge extraction and machine-readable authority.</span>
+          </div>
+          <div class="stat">
+            <strong>SEO</strong>
+            <span>Strong foundations in search architecture, topic depth, intent mapping and conversion-focused visibility.</span>
+          </div>
+          <div class="stat">
+            <strong>GEO</strong>
+            <span>Optimized for the new layer where LLMs, AI search products and citation systems shape discovery.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="glass hero-visual fade-up delay-1">
+        <div class="orbital" aria-hidden="true">
+          <div class="ring"><div class="dot"></div></div>
+          <div class="ring-2"><div class="dot"></div></div>
+          <div class="ring-3"><div class="dot"></div></div>
+          <div class="core">
+            <div class="core-copy">
+              <small>Search Intelligence Core</small>
+              <strong>SEO + AEO + GEO</strong>
+              <span>Positioning brands for humans, search engines and AI systems at the same time.</span>
+            </div>
+          </div>
+          <div class="node n1">
+            <strong>Entity Trust</strong>
+            <span>Structure signals that AI systems can interpret with confidence.</span>
+          </div>
+          <div class="node n2">
+            <strong>Intent Maps</strong>
+            <span>Design content around how questions are actually asked.</span>
+          </div>
+          <div class="node n3">
+            <strong>Citation Paths</strong>
+            <span>Create pages worth referencing in summaries and overviews.</span>
+          </div>
+          <div class="node n4">
+            <strong>Topical Depth</strong>
+            <span>Build authority through connected content systems.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="wrap" id="expertise">
+      <div class="section-head fade-up">
+        <div>
+          <h2>What I bring to the table</h2>
+          <p>I am shaping a personal brand that looks sharp, thinks strategically and feels built for the AI era. This website is designed to present me as a modern visibility specialist, not just a generic marketer.</p>
+        </div>
+      </div>
+      <div class="grid-3">
+        <article class="glass card fade-up delay-1">
+          <span class="tag">AEO Strategy</span>
+          <h3>Built for answer engines</h3>
+          <p>I focus on creating content structures that are easy for search systems and answer engines to parse, trust and elevate. That includes semantic clarity, direct answer layers, structured formatting and topical hierarchy.</p>
+        </article>
+        <article class="glass card fade-up delay-2">
+          <span class="tag">SEO Systems</span>
+          <h3>Search-ready foundations</h3>
+          <p>From information architecture to on-page messaging, I think in systems. Good SEO is not random blogging. It is a strategic framework built on intent, relevance, internal logic and discoverability.</p>
+        </article>
+        <article class="glass card fade-up delay-3">
+          <span class="tag">GEO Positioning</span>
+          <h3>Prepared for AI discovery</h3>
+          <p>The future of organic growth is not only ranking on blue links. It is also about appearing inside AI summaries, recommendation flows, cited answers and generative experiences. I design for that layer too.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap" id="systems">
+      <div class="section-head fade-up">
+        <div>
+          <h2>The visibility system I believe in</h2>
+          <p>My approach combines classic organic growth with answer-engine logic and AI-era discoverability. The result is a cleaner, smarter and more durable online presence.</p>
+        </div>
+      </div>
+      <div class="signal-grid">
+        <div class="glass signal fade-up delay-1">
+          <strong>01</strong>
+          <span>Map search demand by intent clusters, not random keyword lists.</span>
+        </div>
+        <div class="glass signal fade-up delay-2">
+          <strong>02</strong>
+          <span>Create content assets that answer, explain, compare and convert.</span>
+        </div>
+        <div class="glass signal fade-up delay-3">
+          <strong>03</strong>
+          <span>Build entity consistency across brand, topic, author and trust layers.</span>
+        </div>
+        <div class="glass signal fade-up delay-4">
+          <strong>04</strong>
+          <span>Design pages that work for users, crawlers and AI summarizers together.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="experience">
+      <div class="section-head fade-up">
+        <div>
+          <h2>Professional journey</h2>
+          <p>I have worked inside a company environment and developed a strong understanding of how modern digital visibility works. Instead of listing random client names, I prefer presenting the strategic depth I bring.</p>
+        </div>
+      </div>
+      <div class="timeline">
+        <article class="glass timeline-item fade-up delay-1">
+          <div class="time-badge">Company Experience</div>
+          <div>
+            <h3>Hands-on work in real business environments</h3>
+            <p class="small-muted">Built practical understanding of content, search behavior, optimization priorities and digital growth from an internal operating perspective.</p>
+            <ul>
+              <li>Observed how visibility affects trust, acquisition and brand perception.</li>
+              <li>Worked around real-world constraints instead of textbook-only theory.</li>
+              <li>Developed a sharper sense of what matters in execution, not just strategy decks.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="glass timeline-item fade-up delay-2">
+          <div class="time-badge">Independent Brand</div>
+          <div>
+            <h3>Now building a high-signal personal identity</h3>
+            <p class="small-muted">This website is part of a broader personal positioning move. It reflects a clear niche, premium presentation and future-facing expertise.</p>
+            <ul>
+              <li>Focused on becoming known for AEO, SEO and GEO together.</li>
+              <li>Building a profile that feels modern, strategic and AI-native.</li>
+              <li>Creating a digital presence worth sharing with founders, recruiters and collaborators.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap">
+      <div class="proof-grid">
+        <div class="glass quote fade-up">
+          <span class="tag">Positioning Statement</span>
+          <blockquote>
+            “I do not just think about ranking pages. I think about how brands become the most understandable, retrievable and trusted answer in an AI-shaped internet.”
+          </blockquote>
+          <p>This is the mindset behind my work. Search is evolving, and the strongest digital operators are the ones who understand visibility as a multi-engine, multi-interface problem.</p>
+        </div>
+        <div class="glass card fade-up delay-1">
+          <span class="tag">Core Focus Areas</span>
+          <h3>What defines my edge</h3>
+          <div class="stack-list">
+            <div class="stack-item"><strong>Search Intent Design</strong><span>Meaningful topic-to-query alignment</span></div>
+            <div class="stack-item"><strong>Structured Content Logic</strong><span>Readable by users and machines</span></div>
+            <div class="stack-item"><strong>Entity-Led Authority</strong><span>Signals that compound over time</span></div>
+            <div class="stack-item"><strong>AI Discovery Thinking</strong><span>Prepared for LLM visibility layers</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="contact">
+      <div class="contact-wrap">
+        <div class="glass contact-main fade-up">
+          <span class="tag">Connect</span>
+          <h2 style="margin-top:0;font-family:Orbitron,sans-serif;font-size:clamp(1.7rem,3vw,2.8rem)">Let’s build a smarter online presence</h2>
+          <p>If you are looking for someone who understands where search is heading, how AI changes discoverability and how strategic content can become a real visibility asset, I am open to meaningful conversations, collaborations and opportunities.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="mailto:hello@adityaagarwal.com">Email Me</a>
+            <a class="btn" href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div class="glass card fade-up delay-1">
+          <span class="tag">Contact Snapshot</span>
+          <h3>Make this page yours</h3>
+          <p style="margin-bottom:18px;">Replace the placeholders below with your real links and details before sharing the website.</p>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <small>Email</small>
+              <strong>hello@adityaagarwal.com</strong>
+            </div>
+            <div class="contact-card">
+              <small>Location</small>
+              <strong>India</strong>
+            </div>
+            <div class="contact-card">
+              <small>LinkedIn</small>
+              <strong>linkedin.com/in/yourprofile</strong>
+            </div>
+            <div class="contact-card">
+              <small>Focus</small>
+              <strong>AEO, SEO, GEO</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <div class="footer-row">
+      <div>© 2026 Aditya Agarwal. Built for the AI-first web.</div>
+      <div>Single-page futuristic portfolio for modern search visibility.</div>
+    </div>
+  </footer>
 </body>
 </html>
