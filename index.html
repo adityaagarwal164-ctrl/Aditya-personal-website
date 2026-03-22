@@ -295,11 +295,11 @@
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-4));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9, #ec4899);
+  background-clip: text;              /* standard */
+  -webkit-background-clip: text;      /* for Chrome/Safari */
+  -webkit-text-fill-color: transparent;
+}
     .hero-copy p {
       margin: 22px 0 0;
       max-width: 620px;
