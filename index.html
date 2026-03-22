@@ -11,10 +11,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f3f6fb;
+      --bg: #f4f7fb;
       --bg-soft: #ffffff;
-      --panel: rgba(255,255,255,0.72);
-      --panel-strong: rgba(255,255,255,0.92);
+      --panel: rgba(255,255,255,0.78);
+      --panel-strong: rgba(255,255,255,0.94);
       --text: #0d1528;
       --muted: #62708a;
       --line: rgba(18,26,46,0.08);
@@ -30,7 +30,7 @@
     body.dark {
       --bg: #07101c;
       --bg-soft: #0b1628;
-      --panel: rgba(12,20,38,0.72);
+      --panel: rgba(12,20,38,0.74);
       --panel-strong: rgba(12,20,38,0.92);
       --text: #eff5ff;
       --muted: #95a5c1;
@@ -233,15 +233,15 @@
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
+      grid-template-columns: minmax(0, 1.02fr) minmax(380px, 0.98fr);
       gap: 36px;
       align-items: center;
-      min-height: min(880px, 84vh);
+      min-height: 760px;
     }
 
     .hero-copy {
       max-width: 620px;
-      padding: 10px 2px 10px 2px;
+      padding: 10px 2px;
     }
 
     .eyebrow {
@@ -345,7 +345,7 @@
       position: relative;
       width: 100%;
       max-width: 560px;
-      aspect-ratio: 1 / 1.02;
+      min-height: 600px;
       isolation: isolate;
     }
 
@@ -363,6 +363,88 @@
     .hero-panel,
     .photo-card,
     .mini-float,
+    .stat-float {
+      position: absolute;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,0.90), rgba(255,255,255,0.76));
+      backdrop-filter: blur(20px);
+      box-shadow: var(--shadow);
+    }
+
+    body.dark .hero-panel,
+    body.dark .photo-card,
+    body.dark .mini-float,
+    body.dark .stat-float {
+      background: linear-gradient(180deg, rgba(13,22,40,0.94), rgba(10,18,34,0.82));
+    }
+
+    .hero-panel {
+      inset: 16% 4% 4% 14%;
+      border-radius: 34px;
+      overflow: hidden;
+      transform: translate3d(0, calc(var(--stack-shift, 0px) * 0.10), 0);
+      z-index: 1;
+    }
+
+    .photo-card {
+      left: 0;
+      top: 2%;
+      width: 42%;
+      border-radius: 30px;
+      overflow: hidden;
+      padding: 10px;
+      transform: translate3d(0, calc(var(--stack-shift, 0px) * -0.08), 0);
+      z-index: 3;
+    }
+
+    .photo-card img {
+      width: 100%;
+      aspect-ratio: 0.82 / 1;
+      object-fit: cover;
+      border-radius: 24px;
+    }
+
+    .photo-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      padding: 0 4px 4px;
+    }
+
+    .photo-caption strong {
+      display: block;
+      font-size: 0.96rem;
+    }
+
+    .photo-caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 3px;
+    }
+
+    .badge {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.8rem;
+      white-space: nowrap;
+    }
+
+    .mini-float {
+      right: 1%;
+      top: 7%;
+      width: 36%;
+      border-radius: 24px;
+      padding: 15px;
+      transform: translate3d(0, calc(var(--stack-shift, 0px) * 0.08), 0);
+      z-index: 4;
+    }
+
     .stat-float {
       right: 0;
       bottom: 2%;
@@ -849,12 +931,8 @@
     }
 
     @keyframes floatCard {
-      0%, 100% {
-        transform: translateY(0px);
-      }
-      50% {
-        transform: translateY(-8px);
-      }
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
     }
 
     @media (max-width: 1100px) {
@@ -873,44 +951,13 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-copy {
-        max-width: 100%;
-      }
-
-      .hero-visual {
-        min-height: 560px;
-      }
-
-      .visual-stage {
-        max-width: 620px;
-      }
-
-      .hero-panel {
-        inset: 20% 2% 4% 12%;
-      }
-
-      .photo-card {
-        width: 38%;
-      }
-
-      .mini-float {
-        width: 30%;
-      }
-
-      .stat-float {
-        width: 28%;
-      }
-
-      .contact-actions { justify-content: flex-start; }
-    }
-
-      .hero-highlights,
-      .stats-row,
-      .panel-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual { min-height: 620px; }
+      .hero-copy { max-width: 100%; }
+      .hero-visual { min-height: 560px; }
+      .visual-stage { max-width: 620px; }
+      .hero-panel { inset: 20% 2% 4% 12%; }
+      .photo-card { width: 38%; }
+      .mini-float { width: 30%; }
+      .stat-float { width: 28%; }
       .contact-actions { justify-content: flex-start; }
     }
 
@@ -933,106 +980,30 @@
         max-width: 100%;
       }
 
-      .hero-copy p {
-        font-size: 0.96rem;
-      }
-
-      .hero-visual {
-        min-height: 560px;
-      }
-
-      .visual-stage {
-        max-width: 100%;
-        aspect-ratio: auto;
-        min-height: 540px;
-      }
-
-      .photo-card {
-        width: 52%;
-        top: 0;
-      }
-
-      .mini-float {
-        width: 42%;
-        top: 5%;
-      }
-
-      .stat-float {
-        width: 40%;
-        bottom: 3%;
-      }
-
-      .hero-panel {
-        inset: 18% 0 2% 10%;
-      }
-
+      .hero-copy p { font-size: 0.96rem; }
+      .hero-visual { min-height: 560px; }
+      .visual-stage { max-width: 100%; min-height: 540px; }
+      .photo-card { width: 52%; top: 0; }
+      .mini-float { width: 42%; top: 5%; }
+      .stat-float { width: 40%; bottom: 3%; }
+      .hero-panel { inset: 18% 0 2% 10%; }
       .timeline-head { flex-direction: column; }
       .date { white-space: normal; }
       .stats-row { grid-template-columns: 1fr 1fr; }
     }
 
     @media (max-width: 560px) {
-      .hero-shell {
-        padding: 16px;
-      }
-
+      .hero-shell { padding: 16px; }
       .hero-highlights,
-      .stats-row {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        min-height: 620px;
-      }
-
-      .visual-stage {
-        min-height: 600px;
-      }
-
-      .photo-card {
-        width: 60%;
-        left: 0;
-      }
-
-      .mini-float {
-        width: 44%;
-        right: 0;
-      }
-
-      .stat-float {
-        width: 44%;
-        right: 0;
-      }
-
-      .hero-panel {
-        inset: 20% 0 0 8%;
-      }
-
-      .photo-caption {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .badge {
-        padding: 8px 10px;
-      }
-    }
-
-      .nav-links { width: 100%; }
-      .hero-grid { min-height: auto; }
-      .hero-shell,
-      .card,
-      .timeline-item,
-      .contact-box { padding: 20px; border-radius: 26px; }
-      .hero-visual { min-height: 500px; }
-      .visual-stage { max-width: 100%; }
-      .photo-card { width: 56%; }
-      .mini-float { width: 48%; }
-      .stat-float { width: 45%; }
-      .hero-panel { inset: 16% 0 2% 4%; }
-      .timeline-head { flex-direction: column; }
-      .date { white-space: normal; }
-      .stats-row { grid-template-columns: 1fr 1fr; }
+      .stats-row { grid-template-columns: 1fr; }
+      .hero-visual { min-height: 620px; }
+      .visual-stage { min-height: 600px; }
+      .photo-card { width: 60%; left: 0; }
+      .mini-float { width: 44%; right: 0; }
+      .stat-float { width: 44%; right: 0; }
+      .hero-panel { inset: 20% 0 0 8%; }
+      .photo-caption { flex-direction: column; align-items: flex-start; }
+      .badge { padding: 8px 10px; }
     }
   </style>
 </head>
@@ -1375,9 +1346,12 @@
     const reveals = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) entry.target.classList.add('show');
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
       });
     }, { threshold: 0.15 });
+
     reveals.forEach((el) => revealObserver.observe(el));
 
     const visualStack = document.getElementById('visualStack');
@@ -1387,8 +1361,6 @@
         const top = window.scrollY || window.pageYOffset;
         const shift = Math.sin(top / 300) * 10;
         visualStack.style.setProperty('--stack-shift', `${shift}px`);
-      }
-    }px`);
       }
     }
 
