@@ -10,42 +10,46 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f4f7fb;
+      --bg: #f8fafc;
       --bg-soft: #eef4ff;
-      --panel: rgba(255,255,255,0.76);
-      --panel-strong: rgba(255,255,255,0.94);
-      --card: #ffffff;
+      --bg-tint: #fdf2f8;
+      --panel: rgba(255,255,255,0.82);
+      --panel-strong: rgba(255,255,255,0.96);
       --text: #0f172a;
-      --muted: #61708c;
+      --muted: #5f6f8d;
       --line: rgba(15, 23, 42, 0.08);
-      --line-strong: rgba(15, 23, 42, 0.12);
-      --shadow: 0 24px 60px rgba(15, 23, 42, 0.10);
+      --line-strong: rgba(15, 23, 42, 0.14);
+      --shadow: 0 30px 80px rgba(15, 23, 42, 0.10);
       --shadow-soft: 0 14px 34px rgba(15, 23, 42, 0.07);
       --accent: #4f46e5;
-      --accent-2: #06b6d4;
+      --accent-2: #0ea5e9;
       --accent-3: #8b5cf6;
+      --accent-4: #ec4899;
+      --accent-5: #14b8a6;
       --accent-soft: rgba(79, 70, 229, 0.10);
       --success: #10b981;
       --success-soft: rgba(16, 185, 129, 0.12);
-      --max: 1220px;
+      --max: 1240px;
     }
 
     body.dark {
       --bg: #07111f;
-      --bg-soft: #0c1727;
-      --panel: rgba(10,18,34,0.72);
-      --panel-strong: rgba(12,20,38,0.92);
-      --card: #0f1b31;
+      --bg-soft: #0d1728;
+      --bg-tint: #12162c;
+      --panel: rgba(10,18,34,0.76);
+      --panel-strong: rgba(12,20,38,0.94);
       --text: #eef4ff;
       --muted: #93a4bf;
       --line: rgba(255,255,255,0.08);
       --line-strong: rgba(255,255,255,0.14);
-      --shadow: 0 26px 70px rgba(0,0,0,0.34);
+      --shadow: 0 28px 70px rgba(0,0,0,0.34);
       --shadow-soft: 0 16px 36px rgba(0,0,0,0.22);
       --accent: #8b7bff;
       --accent-2: #22d3ee;
       --accent-3: #b794ff;
-      --accent-soft: rgba(139,123,255,0.18);
+      --accent-4: #f472b6;
+      --accent-5: #2dd4bf;
+      --accent-soft: rgba(139,123,255,0.16);
       --success: #22c55e;
       --success-soft: rgba(34,197,94,0.14);
     }
@@ -58,9 +62,10 @@
       font-family: Inter, system-ui, sans-serif;
       color: var(--text);
       background:
-        radial-gradient(circle at top left, rgba(79,70,229,0.12), transparent 24%),
-        radial-gradient(circle at top right, rgba(6,182,212,0.10), transparent 26%),
-        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 100%);
+        radial-gradient(circle at top left, rgba(79,70,229,0.10), transparent 22%),
+        radial-gradient(circle at top right, rgba(236,72,153,0.09), transparent 18%),
+        radial-gradient(circle at 70% 80%, rgba(20,184,166,0.09), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, var(--bg-soft) 52%, var(--bg-tint) 100%);
       transition: background 0.35s ease, color 0.35s ease;
       overflow-x: hidden;
     }
@@ -71,11 +76,11 @@
       inset: 0;
       pointer-events: none;
       background-image:
-        linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(circle at center, black 34%, transparent 82%);
-      opacity: 0.6;
+        linear-gradient(rgba(15,23,42,0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(15,23,42,0.025) 1px, transparent 1px);
+      background-size: 52px 52px;
+      mask-image: radial-gradient(circle at center, black 34%, transparent 84%);
+      opacity: 0.56;
       z-index: 0;
     }
 
@@ -83,7 +88,7 @@
       background-image:
         linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      opacity: 0.34;
+      opacity: 0.28;
     }
 
     a { color: inherit; text-decoration: none; }
@@ -132,7 +137,7 @@
       font-weight: 800;
       color: white;
       background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.26);
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.24);
     }
 
     .brand-copy strong {
@@ -193,10 +198,6 @@
       transition: transform 0.3s ease;
     }
 
-    .theme-toggle:hover svg {
-      transform: rotate(12deg) scale(1.06);
-    }
-
     .btn {
       display: inline-flex;
       align-items: center;
@@ -224,14 +225,14 @@
     }
 
     .hero {
-      padding: 30px 0 18px;
+      padding: 32px 0 18px;
     }
 
     .hero-box {
       position: relative;
       overflow: hidden;
-      padding: 34px;
-      border-radius: 34px;
+      padding: 36px;
+      border-radius: 36px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       backdrop-filter: blur(20px);
@@ -243,19 +244,18 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(circle at 15% 18%, rgba(79,70,229,0.12), transparent 26%),
-        radial-gradient(circle at 86% 20%, rgba(6,182,212,0.12), transparent 24%),
-        radial-gradient(circle at 72% 86%, rgba(139,92,246,0.10), transparent 24%);
+        radial-gradient(circle at 18% 16%, rgba(79,70,229,0.12), transparent 24%),
+        radial-gradient(circle at 82% 18%, rgba(14,165,233,0.12), transparent 22%),
+        radial-gradient(circle at 78% 82%, rgba(236,72,153,0.10), transparent 22%);
       pointer-events: none;
-      animation: pulseBg 14s ease-in-out infinite alternate;
     }
 
     .hero-grid {
       position: relative;
       display: grid;
-      grid-template-columns: minmax(0, 1.05fr) minmax(380px, 0.95fr);
-      gap: 42px;
-      align-items: center;
+      grid-template-columns: minmax(0, 1.06fr) minmax(360px, 0.94fr);
+      gap: 44px;
+      align-items: start;
     }
 
     .eyebrow {
@@ -266,7 +266,7 @@
       border-radius: 999px;
       margin-bottom: 20px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.42);
+      background: rgba(255,255,255,0.48);
       color: var(--accent);
       box-shadow: var(--shadow-soft);
       font-size: 0.84rem;
@@ -286,17 +286,16 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(3rem, 6vw, 6rem);
-      line-height: 0.92;
+      font-size: clamp(2.9rem, 5.5vw, 5.6rem);
+      line-height: 0.94;
       letter-spacing: -0.08em;
       max-width: 760px;
-      word-break: normal;
-      overflow-wrap: anywhere;
       text-wrap: balance;
+      overflow-wrap: anywhere;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-4));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -306,7 +305,7 @@
       max-width: 620px;
       color: var(--muted);
       line-height: 1.82;
-      font-size: 1.02rem;
+      font-size: 1.03rem;
     }
 
     .hero-actions {
@@ -320,51 +319,42 @@
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
-      margin-top: 28px;
+      margin-top: 30px;
       max-width: 760px;
     }
 
     .metric-tile {
-      padding: 18px;
-      border-radius: 22px;
+      padding: 20px;
+      border-radius: 24px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.48);
+      background: rgba(255,255,255,0.58);
       box-shadow: var(--shadow-soft);
       transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
     body.dark .metric-tile { background: rgba(255,255,255,0.04); }
 
-    .metric-tile:hover {
-      transform: translateY(-5px);
-      border-color: rgba(79, 70, 229, 0.22);
-    }
-
     .metric-tile strong {
       display: block;
-      font-size: 1.55rem;
+      font-size: 1.6rem;
       line-height: 1;
       margin-bottom: 8px;
     }
 
     .metric-tile span {
       display: block;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.55;
     }
 
     .hero-stage {
-      position: relative;
-    }
-
-    .hero-visual-shell {
       display: grid;
       gap: 18px;
     }
 
     .visual-card {
-      border-radius: 28px;
+      border-radius: 30px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       backdrop-filter: blur(18px);
@@ -372,10 +362,10 @@
     }
 
     .profile-card {
-      padding: 16px;
+      padding: 18px;
       display: grid;
-      grid-template-columns: 132px 1fr;
-      gap: 16px;
+      grid-template-columns: 130px 1fr;
+      gap: 18px;
       align-items: center;
     }
 
@@ -388,7 +378,7 @@
 
     .profile-copy strong {
       display: block;
-      font-size: 1.8rem;
+      font-size: 1.9rem;
       line-height: 1.02;
       letter-spacing: -0.05em;
     }
@@ -427,20 +417,19 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 18px;
-      align-items: stretch;
     }
 
     .story-panel,
     .chart-panel,
-    .ring-panel,
-    .result-panel {
+    .result-panel,
+    .tools-panel {
       padding: 22px;
     }
 
     .story-panel h3,
-    .result-panel h3,
     .chart-panel h3,
-    .ring-panel h3 {
+    .result-panel h3,
+    .tools-panel h3 {
       margin: 0 0 10px;
       font-size: 1.02rem;
       letter-spacing: -0.03em;
@@ -448,7 +437,7 @@
 
     .story-panel p,
     .result-panel p,
-    .ring-panel p {
+    .tools-panel p {
       margin: 0;
       color: var(--muted);
       line-height: 1.72;
@@ -466,11 +455,7 @@
       font-weight: 600;
     }
 
-    .dots {
-      display: flex;
-      gap: 6px;
-    }
-
+    .dots { display: flex; gap: 6px; }
     .dots span {
       width: 8px;
       height: 8px;
@@ -488,8 +473,7 @@
 
     .bars span {
       border-radius: 999px 999px 14px 14px;
-      background: linear-gradient(180deg, var(--accent-2), var(--accent-3));
-      animation: growIn 1.2s ease both;
+      background: linear-gradient(180deg, var(--accent-2), var(--accent-3), var(--accent-4));
       box-shadow: inset 0 1px 0 rgba(255,255,255,0.26);
     }
 
@@ -516,89 +500,49 @@
       padding: 12px 14px;
       border-radius: 16px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.42);
+      background: rgba(255,255,255,0.46);
       color: var(--muted);
     }
 
     body.dark .focus-item { background: rgba(255,255,255,0.04); }
     .focus-item strong { color: var(--text); }
 
-    .tool-ring-wrap {
+    .tool-grid {
       display: grid;
-      place-items: center;
-      padding: 10px 0 2px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
     }
 
-    .tool-ring {
-      position: relative;
-      width: 290px;
-      height: 290px;
-      display: grid;
-      place-items: center;
-    }
-
-    .tool-ring::before {
-      content: "";
-      position: absolute;
-      inset: 22px;
-      border-radius: 50%;
-      border: 1px dashed var(--line-strong);
-      animation: spin 22s linear infinite;
-    }
-
-    .tool-ring::after {
-      content: "";
-      position: absolute;
-      inset: 54px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--accent-soft), transparent 70%);
-      pointer-events: none;
-    }
-
-    .ring-center {
-      position: relative;
-      z-index: 2;
-      width: 128px;
-      height: 128px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 20px;
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.04em;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      color: white;
-      box-shadow: 0 20px 40px rgba(79, 70, 229, 0.24);
-    }
-
-    .orbit {
-      position: absolute;
-      inset: 0;
-      animation: spin 22s linear infinite;
-    }
-
-    .tool-chip {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform:
-        rotate(var(--angle))
-        translateY(-132px)
-        rotate(calc(var(--angle) * -1));
-      transform-origin: center;
-      padding: 10px 14px;
-      border-radius: 999px;
+    .tool-tile {
+      padding: 14px 10px;
+      border-radius: 18px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.86);
+      background: rgba(255,255,255,0.52);
+      text-align: center;
       box-shadow: var(--shadow-soft);
-      font-size: 0.84rem;
-      font-weight: 700;
-      white-space: nowrap;
     }
 
-    body.dark .tool-chip { background: rgba(12,20,38,0.94); }
+    body.dark .tool-tile { background: rgba(255,255,255,0.04); }
+
+    .tool-logo {
+      width: 40px;
+      height: 40px;
+      margin: 0 auto 10px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: white;
+    }
+
+    .tool-tile span {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text);
+    }
 
     .section {
       padding: 34px 0 74px;
@@ -641,19 +585,13 @@
     .proof-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 
     .card {
-      padding: 26px;
+      padding: 28px;
       border-radius: 30px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       backdrop-filter: blur(16px);
       box-shadow: var(--shadow-soft);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-      border-color: rgba(79, 70, 229, 0.18);
     }
 
     .card h3 {
@@ -681,7 +619,7 @@
       padding: 10px 12px;
       border-radius: 999px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.48);
+      background: rgba(255,255,255,0.52);
       box-shadow: var(--shadow-soft);
       font-size: 0.84rem;
       font-weight: 600;
@@ -701,10 +639,10 @@
     .outcome,
     .bullet-row,
     .simple-item {
-      padding: 14px 16px;
+      padding: 15px 16px;
       border-radius: 18px;
       border: 1px solid var(--line);
-      background: rgba(255,255,255,0.46);
+      background: rgba(255,255,255,0.5);
       color: var(--muted);
       line-height: 1.7;
       box-shadow: var(--shadow-soft);
@@ -717,26 +655,24 @@
     .outcome b,
     .bullet-row b { color: var(--text); }
 
+    .proof-grid {
+      align-items: stretch;
+    }
+
     .proof-card {
       position: relative;
       overflow: hidden;
-      padding: 22px;
+      padding: 24px;
       border-radius: 28px;
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       box-shadow: var(--shadow-soft);
-      min-height: 210px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .proof-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
+      min-height: 220px;
     }
 
     .proof-icon {
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
       border-radius: 16px;
       display: grid;
       place-items: center;
@@ -756,7 +692,7 @@
 
     .proof-card strong {
       display: block;
-      font-size: 2.1rem;
+      font-size: 2.2rem;
       line-height: 1;
       margin-bottom: 10px;
       letter-spacing: -0.05em;
@@ -771,21 +707,14 @@
     .proof-card p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.68;
+      line-height: 1.7;
       font-size: 0.94rem;
     }
 
-    .proof-card::after {
-      content: "";
-      position: absolute;
-      right: -40px;
-      bottom: -50px;
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      background: radial-gradient(circle, var(--accent-soft), transparent 68%);
-      pointer-events: none;
-    }
+    .proof-card:nth-child(1) .proof-icon { background: linear-gradient(135deg, var(--accent), var(--accent-2)); }
+    .proof-card:nth-child(2) .proof-icon { background: linear-gradient(135deg, var(--accent-2), var(--accent-5)); }
+    .proof-card:nth-child(3) .proof-icon { background: linear-gradient(135deg, var(--accent-3), var(--accent-4)); }
+    .proof-card:nth-child(4) .proof-icon { background: linear-gradient(135deg, var(--accent-5), var(--accent-3)); }
 
     .timeline {
       position: relative;
@@ -811,13 +740,6 @@
       border: 1px solid var(--line);
       background: linear-gradient(180deg, var(--panel), var(--panel-strong));
       box-shadow: var(--shadow-soft);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-    }
-
-    .timeline-item:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow);
-      border-color: rgba(79, 70, 229, 0.18);
     }
 
     .timeline-item::before {
@@ -870,18 +792,6 @@
       overflow: hidden;
     }
 
-    .contact-box::before {
-      content: "";
-      position: absolute;
-      right: -60px;
-      bottom: -80px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(79,70,229,0.16), transparent 70%);
-      pointer-events: none;
-    }
-
     .contact-box h2 {
       margin: 0;
       font-size: clamp(2rem, 4vw, 3rem);
@@ -920,21 +830,6 @@
       transform: translateY(0);
     }
 
-    @keyframes pulseBg {
-      0% { transform: scale(1) translate(0, 0); }
-      100% { transform: scale(1.06) translate(-10px, 10px); }
-    }
-
-    @keyframes growIn {
-      from { transform: scaleY(0.35); opacity: 0.45; }
-      to { transform: scaleY(1); opacity: 1; }
-    }
-
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-
     @media (max-width: 1180px) {
       .hero-grid,
       .grid-2,
@@ -945,29 +840,20 @@
         grid-template-columns: 1fr;
       }
 
-      .hero-metrics { max-width: 100%; }
       .contact-actions { justify-content: flex-start; }
     }
 
     @media (max-width: 900px) {
-      .hero-grid,
       .visual-grid,
-      .profile-card {
+      .profile-card,
+      .tool-grid,
+      .hero-metrics {
         grid-template-columns: 1fr;
       }
 
       h1 {
-        font-size: clamp(2.5rem, 9vw, 4.6rem);
-        line-height: 0.96;
-      }
-
-      .hero-metrics { grid-template-columns: 1fr; }
-      .tool-ring {
-        width: 260px;
-        height: 260px;
-      }
-      .tool-chip {
-        transform: rotate(var(--angle)) translateY(-118px) rotate(calc(var(--angle) * -1));
+        font-size: clamp(2.4rem, 10vw, 4.4rem);
+        line-height: 0.97;
       }
     }
 
@@ -987,7 +873,7 @@
       .visual-card { padding: 20px; border-radius: 24px; }
       .timeline-head { flex-direction: column; }
       .date { white-space: normal; }
-      .profile-copy strong { font-size: 1.4rem; }
+      .profile-copy strong { font-size: 1.45rem; }
     }
 
     @media (max-width: 560px) {
@@ -995,23 +881,8 @@
       .wrap { width: min(var(--max), calc(100% - 20px)); }
       .hero-box { padding: 16px; }
       h1 {
-        font-size: clamp(2.2rem, 12vw, 3.6rem);
+        font-size: clamp(2.1rem, 12vw, 3.4rem);
         letter-spacing: -0.06em;
-      }
-      .proof-card strong { font-size: 1.8rem; }
-      .tool-ring {
-        width: 220px;
-        height: 220px;
-      }
-      .ring-center {
-        width: 110px;
-        height: 110px;
-        font-size: 0.9rem;
-      }
-      .tool-chip {
-        padding: 8px 10px;
-        font-size: 0.76rem;
-        transform: rotate(var(--angle)) translateY(-98px) rotate(calc(var(--angle) * -1));
       }
     }
   </style>
@@ -1074,68 +945,79 @@
         </div>
 
         <div class="hero-stage">
-          <div class="hero-visual-shell">
-            <div class="visual-card profile-card">
-              <img class="profile-photo" src="aditya-photo.jpg" alt="Portrait of Aditya Agarwal">
-              <div class="profile-copy">
-                <strong>Aditya Agarwal</strong>
-                <span>SEO • AEO • GEO Specialist</span>
-                <div class="status-pill">Open to opportunities</div>
+          <div class="visual-card profile-card">
+            <img class="profile-photo" src="aditya-photo.jpg" alt="Portrait of Aditya Agarwal">
+            <div class="profile-copy">
+              <strong>Aditya Agarwal</strong>
+              <span>SEO • AEO • GEO Specialist</span>
+              <div class="status-pill">Open to opportunities</div>
+            </div>
+          </div>
+
+          <div class="visual-grid">
+            <div class="visual-card story-panel">
+              <h3>Current role</h3>
+              <p>Marketing Associate at Nifty, focused on organic growth, AI search visibility, content systems and acquisition-led SEO.</p>
+            </div>
+
+            <div class="visual-card chart-panel">
+              <div class="panel-top">
+                <div class="dots"><span></span><span></span><span></span></div>
+                <div>Growth snapshot</div>
+              </div>
+              <h3>Visibility growth</h3>
+              <div class="bars">
+                <span style="height: 28%"></span>
+                <span style="height: 40%"></span>
+                <span style="height: 52%"></span>
+                <span style="height: 66%"></span>
+                <span style="height: 74%"></span>
+                <span style="height: 88%"></span>
+                <span style="height: 100%"></span>
+              </div>
+              <div class="chart-caption">
+                <span>Search → trust → conversion</span>
+                <span>Compounding growth</span>
               </div>
             </div>
 
-            <div class="visual-grid">
-              <div class="visual-card story-panel">
-                <h3>Current role</h3>
-                <p>Marketing Associate at Nifty, focused on organic growth, AI search visibility, content systems and acquisition-led SEO.</p>
+            <div class="visual-card result-panel">
+              <h3>How I work</h3>
+              <p>Blending search intent, topical authority, technical SEO and content design to improve visibility across both classic search and AI-driven experiences.</p>
+              <div class="focus-list">
+                <div class="focus-item"><span>Search intent</span><strong>Mapped well</strong></div>
+                <div class="focus-item"><span>Content systems</span><strong>Built deeply</strong></div>
+                <div class="focus-item"><span>Technical SEO</span><strong>Fixed cleanly</strong></div>
               </div>
+            </div>
 
-              <div class="visual-card chart-panel">
-                <div class="panel-top">
-                  <div class="dots"><span></span><span></span><span></span></div>
-                  <div>Growth snapshot</div>
+            <div class="visual-card tools-panel">
+              <h3>Core tools</h3>
+              <p>A cleaner tools section using visual logo-style tiles instead of the moving ring.</p>
+              <div class="tool-grid">
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #10a37f, #0f766e);">CG</div>
+                  <span>ChatGPT</span>
                 </div>
-                <h3>Visibility growth</h3>
-                <div class="bars">
-                  <span style="height: 28%"></span>
-                  <span style="height: 40%"></span>
-                  <span style="height: 52%"></span>
-                  <span style="height: 66%"></span>
-                  <span style="height: 74%"></span>
-                  <span style="height: 88%"></span>
-                  <span style="height: 100%"></span>
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #f97316, #ea580c);">AH</div>
+                  <span>Ahrefs</span>
                 </div>
-                <div class="chart-caption">
-                  <span>Search → trust → conversion</span>
-                  <span>Compounding growth</span>
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #7c3aed, #4f46e5);">CL</div>
+                  <span>Claude</span>
                 </div>
-              </div>
-
-              <div class="visual-card result-panel">
-                <h3>How I work</h3>
-                <p>Blending search intent, topical authority, technical SEO and content design to improve visibility across both classic search and AI-driven experiences.</p>
-                <div class="focus-list">
-                  <div class="focus-item"><span>Search intent</span><strong>Mapped well</strong></div>
-                  <div class="focus-item"><span>Content systems</span><strong>Built deeply</strong></div>
-                  <div class="focus-item"><span>Technical SEO</span><strong>Fixed cleanly</strong></div>
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #2563eb, #0ea5e9);">SC</div>
+                  <span>Search Console</span>
                 </div>
-              </div>
-
-              <div class="visual-card ring-panel">
-                <h3>Tools I work with</h3>
-                <p>AI tools and SEO platforms visualised in a moving ring so the hero feels more alive without breaking the layout.</p>
-                <div class="tool-ring-wrap">
-                  <div class="tool-ring">
-                    <div class="ring-center">SEO + AI<br>Stack</div>
-                    <div class="orbit">
-                      <div class="tool-chip" style="--angle: 0deg;">ChatGPT</div>
-                      <div class="tool-chip" style="--angle: 60deg;">Ahrefs</div>
-                      <div class="tool-chip" style="--angle: 120deg;">Claude</div>
-                      <div class="tool-chip" style="--angle: 180deg;">GSC</div>
-                      <div class="tool-chip" style="--angle: 240deg;">Surfer</div>
-                      <div class="tool-chip" style="--angle: 300deg;">GA4</div>
-                    </div>
-                  </div>
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #ef4444, #ec4899);">SF</div>
+                  <span>Surfer</span>
+                </div>
+                <div class="tool-tile">
+                  <div class="tool-logo" style="background: linear-gradient(135deg, #14b8a6, #06b6d4);">GA</div>
+                  <span>GA4</span>
                 </div>
               </div>
             </div>
