@@ -129,7 +129,15 @@
     }
 
     .brand-mark {
-      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      color: white;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      box-shadow: 0 10px 25px rgba(79, 70, 229, 0.24);
     }
 
     .brand-copy strong {
@@ -278,20 +286,20 @@
 
     h1 {
       margin: 0;
-      font-size: clamp(2.2rem, 4.2vw, 4.2rem);
-      line-height: 1.02;
-      letter-spacing: -0.05em;
-      max-width: 680px;
+      font-size: clamp(2.9rem, 5.5vw, 5.6rem);
+      line-height: 0.94;
+      letter-spacing: -0.08em;
+      max-width: 760px;
       text-wrap: balance;
       overflow-wrap: anywhere;
     }
 
     .gradient-text {
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-4));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
+  background: linear-gradient(90deg, #4f46e5, #0ea5e9, #ec4899);
+  background-clip: text;              /* standard */
+  -webkit-background-clip: text;      /* for Chrome/Safari */
+  -webkit-text-fill-color: transparent;
+}
     .hero-copy p {
       margin: 22px 0 0;
       max-width: 620px;
@@ -308,7 +316,11 @@
     }
 
     .hero-metrics {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 30px;
+      max-width: 760px;
     }
 
     .metric-tile {
@@ -647,89 +659,6 @@
       align-items: stretch;
     }
 
-    .strategy-card {
-      position: relative;
-      overflow: hidden;
-      min-height: 250px;
-    }
-
-    .mini-graphic {
-      position: relative;
-      height: 90px;
-      margin-bottom: 18px;
-      border-radius: 18px;
-      border: 1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,0.54), rgba(255,255,255,0.18));
-      overflow: hidden;
-    }
-
-    body.dark .mini-graphic {
-      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
-    }
-
-    .mini-graphic span {
-      position: absolute;
-      display: block;
-    }
-
-    .lines-graphic span:nth-child(1) {
-      left: 10%; right: 18%; top: 62%; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent), var(--accent-2));
-      transform: rotate(-8deg);
-    }
-
-    .lines-graphic span:nth-child(2) {
-      left: 24%; right: 12%; top: 38%; height: 2px;
-      background: linear-gradient(90deg, transparent, var(--accent-2), var(--accent-4));
-      transform: rotate(5deg);
-    }
-
-    .lines-graphic span:nth-child(3) {
-      width: 12px; height: 12px; border-radius: 50%; right: 16%; top: 22%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-4));
-      box-shadow: 0 0 0 8px rgba(79,70,229,0.08);
-    }
-
-    .nodes-graphic::before {
-      content: "";
-      position: absolute;
-      inset: 16px;
-      border: 1px dashed var(--line-strong);
-      border-radius: 16px;
-    }
-
-    .nodes-graphic span {
-      width: 14px; height: 14px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-3), var(--accent-2));
-      box-shadow: 0 0 0 7px rgba(14,165,233,0.08);
-    }
-
-    .nodes-graphic span:nth-child(1) { left: 18%; top: 18%; }
-    .nodes-graphic span:nth-child(2) { right: 20%; top: 26%; }
-    .nodes-graphic span:nth-child(3) { left: 30%; bottom: 18%; }
-    .nodes-graphic span:nth-child(4) { right: 28%; bottom: 16%; }
-
-    .bars-graphic span {
-      bottom: 14px; width: 16%; border-radius: 14px 14px 8px 8px;
-      background: linear-gradient(180deg, var(--accent-2), var(--accent-3), var(--accent-4));
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.26);
-    }
-
-    .bars-graphic span:nth-child(1) { left: 12%; height: 28px; }
-    .bars-graphic span:nth-child(2) { left: 32%; height: 46px; }
-    .bars-graphic span:nth-child(3) { left: 52%; height: 60px; }
-    .bars-graphic span:nth-child(4) { left: 72%; height: 74px; }
-
-    .path-graphic span {
-      left: 14px; right: 14px; height: 8px; border-radius: 999px;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-5));
-      opacity: 0.95;
-    }
-
-    .path-graphic span:nth-child(1) { top: 22px; }
-    .path-graphic span:nth-child(2) { top: 44px; width: 74%; }
-    .path-graphic span:nth-child(3) { top: 66px; width: 48%; }
-
     .proof-card {
       position: relative;
       overflow: hidden;
@@ -918,18 +847,13 @@
       .visual-grid,
       .profile-card,
       .tool-grid,
-      .hero-metrics,
-      .grid-2,
-      .proof-grid,
-      .skill-grid,
-      .contact-grid,
-      .cert-grid {
+      .hero-metrics {
         grid-template-columns: 1fr;
       }
 
       h1 {
-        font-size: clamp(1.95rem, 8vw, 3.3rem);
-        line-height: 1.04;
+        font-size: clamp(2.4rem, 10vw, 4.4rem);
+        line-height: 0.97;
       }
     }
 
@@ -957,11 +881,8 @@
       .wrap { width: min(var(--max), calc(100% - 20px)); }
       .hero-box { padding: 16px; }
       h1 {
-        font-size: clamp(1.8rem, 10vw, 2.8rem);
-        letter-spacing: -0.04em;
-      }
-      .section-head h2 {
-        font-size: clamp(1.7rem, 8vw, 2.4rem);
+        font-size: clamp(2.1rem, 12vw, 3.4rem);
+        letter-spacing: -0.06em;
       }
     }
   </style>
@@ -979,7 +900,6 @@
 
       <div class="nav-links">
         <a href="#about">About</a>
-        <a href="#difference">Differentiator</a>
         <a href="#proof">Proof</a>
         <a href="#experience">Experience</a>
         <a href="#how-i-work">How I work</a>
@@ -1009,6 +929,19 @@
             <a href="#contact" class="btn primary">Connect with me</a>
             <a href="#experience" class="btn">View experience</a>
           </div>
+          <div class="hero-metrics">
+            <div class="metric-tile">
+              <strong>273%</strong>
+              <span>Organic traffic growth through content optimisation and smarter page structure.</span>
+            </div>
+            <div class="metric-tile">
+              <strong>8x</strong>
+              <span>Signup growth by aligning content with funnel stages and search intent.</span>
+            </div>
+            <div class="metric-tile">
+              <strong>167%</strong>
+              <span>LLM visibility improvement through better relevance, clarity and discoverability.</span>
+            </div>
           </div>
         </div>
 
@@ -1049,7 +982,13 @@
               </div>
             </div>
 
-            </div>
+            <div class="visual-card result-panel" style="grid-column: 1 / -1;">
+              <h3>What makes my work different</h3>
+              <div class="focus-list">
+                <div class="focus-item"><span>Search strategy</span><strong>Built around user intent</strong></div>
+                <div class="focus-item"><span>Content systems</span><strong>Planned for scale</strong></div>
+                <div class="focus-item"><span>AI discoverability</span><strong>Aligned for answer engines</strong></div>
+              </div>
             </div>
           </div>
         </div>
@@ -1087,41 +1026,6 @@
           <div class="outcome"><b>167% stronger LLM visibility</b> by improving search intent mapping and content signals.</div>
           <div class="outcome"><b>80+ high-authority backlinks</b> earned through outreach and strategic placements.</div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section wrap reveal" id="difference">
-    <div class="section-head">
-      <div>
-        <h2>What makes me different</h2>
-        <p>This section is designed for recruiters who want to understand not just results, but how I think, how I prioritise and how I build sustainable growth in a search landscape shaped by AI.</p>
-      </div>
-    </div>
-
-    <div class="grid-2">
-      <div class="card strategy-card">
-        <div class="mini-graphic lines-graphic"><span></span><span></span><span></span></div>
-        <h3>Strategy before execution</h3>
-        <p>I start with user intent, funnel stage and query behaviour before deciding what to build. That keeps the work grounded in business outcomes instead of vanity SEO tasks.</p>
-      </div>
-
-      <div class="card strategy-card">
-        <div class="mini-graphic nodes-graphic"><span></span><span></span><span></span><span></span></div>
-        <h3>Systems, not isolated pages</h3>
-        <p>I think in clusters, journeys and content relationships. This helps create stronger internal linking, better authority flow and a site structure that scales over time.</p>
-      </div>
-
-      <div class="card strategy-card">
-        <div class="mini-graphic bars-graphic"><span></span><span></span><span></span><span></span></div>
-        <h3>AI-aware SEO thinking</h3>
-        <p>I consider how content surfaces in search, answer engines and AI experiences, so discoverability improves across the full ecosystem, not just one rankings report.</p>
-      </div>
-
-      <div class="card strategy-card">
-        <div class="mini-graphic path-graphic"><span></span><span></span><span></span></div>
-        <h3>Visibility tied to conversion</h3>
-        <p>I focus on the quality of traffic, middle-of-funnel opportunities and stronger page journeys so growth work supports pipeline and signups, not just impressions.</p>
       </div>
     </div>
   </section>
